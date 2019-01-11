@@ -1,6 +1,7 @@
--------
-Windows
--------
+#########
+# Windows
+#########
+
 # Windows thumbnail cache files
 Thumbs.db
 ehthumbs.db
@@ -25,9 +26,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-------------------
-Visual Studio Code
-------------------
+####################
+# Visual Studio Code
+####################
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
