@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="SAIT Campus Survey">
+    <meta name="keywords" content="SAIT, campus, survey, feedback, student">
+    <meta name="author" content="Carlos J. Garcia Carmona">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="./" target="_self">
+    <title>SAIT Campus Survey</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>SAIT Campus Survey</h1>
+    <form method="POST" target="_blank" autocomplete="on">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <section id="personal-info">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" name="name" required>
+                    <label for="email">Email address</label>
+                    <input id="email" type="email" name="email" required>
+                    <label for="phone">Contact phone</label>
+                    <!-- <input type="tel" name="phone"> -->
+                    <input id="phone" type="text" name="phone" size="15" placeholder="Canadian number" pattern="[0-9]">
+            </section>
+        </fieldset>
+        <fieldset>
+            <p>What did you like most about campus?</p>
+            <input type="checkbox" name="like-option-1" value="campus_location">Campus location<br>
+            <input type="checkbox" name="like-option-2" value="athletic_centre">Athletic Centre<br>
+            <input type="checkbox" name="like-option-3" value="student_centre">Student Centre<br>
+            <input type="checkbox" name="like-option-4" value="lab_classes">Lab classes
+        </fieldset>
+        <fieldset>
+            <p>How did you become interested in SAIT?</p>
+            <input type="radio" name="interest" value="open_house">Open House<br>
+            <input type="radio" name="interest" value="advertising">Advertising<br>
+            <input type="radio" name="interest" value="school_counselling">School Counselling<br>
+            <input type="radio" name="interest" value="word_mouth">Word of Mouth<br>
+        </fieldset>
+        <fieldset>
+            <legend>Comments</legend>
+            <textarea name="comments"></textarea>
+        </fieldset>
+        <section id="buttons">
+            <input id="button-reset" type="reset"></button>
+            <input id="button-submit" type="submit"></button>
+        </section>
+    </form>
+</body>
+
+</html>
