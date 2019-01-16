@@ -69,6 +69,10 @@ li {
     margin-bottom: 1vh;
 }
 
+li a {
+    text-decoration: none;
+}
+
 li span.ref-num {
     font-weight: 700;
 }
