@@ -1,0 +1,74 @@
+html {
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(lavender, lightblue);
+}
+
+#home {
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+#box {
+    background-color: darkslateblue;
+    width: 40vw;
+    height: 40vh;
+    top: 0;
+    border: 5px solid white;
+    border-top: none;
+    margin: auto;
+}
+
+#cover h1 {
+    font-weight: 400;
+    font-size: 3em;
+    color: steelblue;
+}
+
+#cover #author { 
+    font-weight: 500;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    padding: 2vh;
+    background-color: darkslateblue;
+}
+
+.nav-row {
+    color: white;
+}
+
+.nav-row:first-child {
+    bottom: 4vh;
+    margin-bottom: 1.5vh;
+}
+
+.nav-row:nth-child(2) {
+    bottom: 2vh;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5vh;
+    margin: 0 0.5vw;
+    vertical-align: middle;
+}
+
+nav a.active, nav a:hover {
+    background-color: white;
+    border-radius: 20%;
+}
+
+nav a.active {
+    color: darkslateblue;
+}
+
+nav a:hover {
+    color: steelblue;
+}
