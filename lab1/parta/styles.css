@@ -4,7 +4,7 @@ html {
     background-image: linear-gradient(lavender, lightblue);
 }
 
-#home {
+body {
     height: 100vh;
     margin: 0;
     text-align: center;
@@ -35,12 +35,12 @@ nav {
     bottom: 0;
     width: 100%;
     height: fit-content;
-    padding: 2vh;
     background-color: darkslateblue;
+    color: white;
 }
 
-.nav-row {
-    color: white;
+nav.home {
+    padding: 2vh;
 }
 
 .nav-row:first-child {
@@ -56,11 +56,11 @@ nav a {
     text-decoration: none;
     color: white;
     padding: 0.5vh;
-    margin: 0 0.5vw;
+    margin: 0px 0.5vw;
     vertical-align: middle;
 }
 
-nav a.active, nav a:hover {
+nav a.active, nav.home a:hover {
     background-color: white;
     border-radius: 20%;
 }
@@ -69,6 +69,31 @@ nav a.active {
     color: darkslateblue;
 }
 
-nav a:hover {
+nav a:hover, nav button:hover {
     color: steelblue;
+}
+
+nav.page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav.page button {
+    border: none;
+    background-color: transparent;
+    width: 200px;
+}
+
+nav.page button a {
+    display: flex;
+    flex-direction: column;
+}
+
+nav.page button:hover {
+    background-color: white;
+}
+
+button.disabled {
+    opacity: .6;
 }
