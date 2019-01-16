@@ -20,6 +20,10 @@ body {
     margin: auto;
 }
 
+#cover p {
+    text-align: center;
+}
+
 #cover #author { 
     font-weight: 500;
 }
@@ -67,6 +71,12 @@ li {
 
 li span.ref-num {
     font-weight: 700;
+}
+
+section.content img {
+    width: 90vw;
+    border-radius: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 nav {
