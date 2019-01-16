@@ -41,6 +41,13 @@ nav {
 
 nav.home {
     padding: 2vh;
+    width: 97%;
+}
+
+.nav-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .nav-row:first-child {
@@ -57,7 +64,10 @@ nav a {
     color: white;
     padding: 0.5vh;
     margin: 0px 0.5vw;
-    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
 }
 
 nav a.active, nav.home a:hover {
@@ -69,8 +79,9 @@ nav a.active {
     color: darkslateblue;
 }
 
-nav a:hover, nav button:hover {
+nav a:hover {
     color: steelblue;
+    background-color: white;
 }
 
 nav.page {
@@ -79,21 +90,14 @@ nav.page {
     justify-content: space-between;
 }
 
-nav.page button {
-    border: none;
-    background-color: transparent;
+nav.page a {
     width: 200px;
-}
-
-nav.page button a {
+    margin: 0;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-nav.page button:hover {
-    background-color: white;
-}
-
-button.disabled {
+a.disabled {
     opacity: .6;
 }
