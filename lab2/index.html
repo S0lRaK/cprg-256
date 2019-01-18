@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="About Carlos J. Garcia Carmona">
+    <meta name="keywords" content="Carlos, Garcia, Carmona, about, SAIT">
+    <meta name="author" content="Carlos J. Garcia Carmona">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos J. Garcia Carmona</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Carlos J. Garcia Carmona</h1>
+    <section id="top">
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#courses">Courses</a>
+            <a href="#work">Work Experience</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+        <div id="welcome">
+            <img src="photos/Carlos at Lake Louise Tea House.jpg" alt="Carlos profile photo">
+            <p>"Welcome to my personal place!"</p>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <div id="about-gallery">
+            <div class="about-fact">
+                <img src="photos/Canet_de_Mar.jpg" alt="Canet de Mar">
+                <div class="overlay">
+                    <div class="text">
+                        Born in Canet de Mar,<br>a town close to Barcelona<br>in Spain
+                    </div>
+                </div>
+            </div>
+            <div class="about-fact">
+                <img src="photos/futsal.jpg" alt="Futsal">
+                <div class="overlay">
+                    <div class="text">
+                        Played Futsal<br>for +10 years
+                    </div>
+                </div>
+            </div>
+            <div class="about-fact">
+                <img src="photos/wine.jpg" alt="Wine glasses">
+                <div class="overlay">
+                    <div class="text">
+                        Enjoy wine<br>with fine cuisine
+                    </div>
+                </div>
+            </div>
+            <div class="about-fact">
+                <img src="photos/Samoyed.jpg" alt="Samoyed dogs">
+                <div class="overlay">
+                    <div class="text">
+                        Love dogs
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="courses">
+        <h2>Courses</h2>
+        <table>
+            <caption>ITSD 2nd Semester</caption>
+            <tr>
+                <th>Course code</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>CPRG-250</td>
+                <td>Database Design and Programming</td>
+            </tr>
+            <tr>
+                <td>CPRG-251</td>
+                <td>Object Oriented Programming Essentials</td>
+            </tr>
+            <tr>
+                <td>CPRG-256</td>
+                <td>Website Development Fundamentals</td>
+            </tr>
+            <tr>
+                <td>CMPS-253</td>
+                <td>Interface Design</td>
+            </tr>
+            <tr>
+                <td>HREL-250</td>
+                <td>Business Dynamics</td>
+            </tr>
+        </table>
+    </section>
+    <section id="work">
+        <h2>Work Experience</h2>
+        <ul>
+            <li>
+                <span class="job-title">Frontend Developer</span><br>
+                <span class="company">UXLand</span><br>
+                <span class="time-period">December 2017 - Present</span><br>
+                <span class="city">Barcelona & Calgary</span>
+            </li>
+            <li>
+                <span class="job-title">IT Consultant</span><br>
+                <span class="company">Future Forward Inc.</span><br>
+                <span class="time-period">November 2016 - July 2017</span><br>
+                <span class="city">Calgary</span>
+            </li>
+            <li>
+                <span class="job-title">Back Office Assistant / Driver / Event Staff</span><br>
+                <span class="company">Red Events</span><br>
+                <span class="time-period">May 2016 - October 2016</span><br>
+                <span class="city">Calgary</span>
+            </li>
+            <li>
+                <span class="job-title">Webmaster</span><br>
+                <span class="company">Izando Marketing</span><br>
+                <span class="time-period">June 2015 - August 2015</span><br>
+                <span class="city">Calgary</span>
+            </li>
+            <li>
+                <span class="job-title">Trainee Web Developer</span><br>
+                <span class="company">Emagister</span><br>
+                <span class="time-period">June 2014 - April 2015</span><br>
+                <span class="city">Sant Cugat</span>
+            </li>
+            <li>
+                <span class="job-title">Waiter</span><br>
+                <span class="company">La Queixalada</span><br>
+                <span class="time-period">July 2010 - August 2013</span><br>
+                <span class="city">Canet de Mar</span>
+            </li>
+            <li>
+                <span class="job-title">Waiter</span><br>
+                <span class="company">El Parador de Canet</span><br>
+                <span class="time-period">March 2007 - August 2008</span><br>
+                <span class="city">Canet de Mar</span>
+            </li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="personal@sait.ca" method="POST" target="_blank" autocomplete="on">
+            <fieldset>
+                <div id="subject-part">
+                    <label for="subject">Subject</label>
+                    <input id="subject" type="text" name="subject" required>
+                </div>
+                <div id="message-type-part">
+                    <span>Message type</span>
+                    <div id="radiobuttons">
+                        <input type="radio" name="message_type" value="personal">
+                            <span>Personal</span>
+                        <input type="radio" name="message_type" value="work">
+                            <span>Work</span>
+                    </div>
+                </div>
+                <div id="message-part">
+                    <label for="message">Message</label>
+                    <textarea name="message"></textarea>
+                </div>
+            </fieldset>
+            <section id="buttons">
+                <input id="button-reset" type="reset"></button>
+                <input id="button-submit" type="submit"></button>
+            </section>
+        </form>
+    </section>
+    <div id="back-to-top">
+        <a href="#top">
+            <span class="material-icons">keyboard_arrow_up</span>
+        </a>
+    </div>
+</body>
+
+</html>
