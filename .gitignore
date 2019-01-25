@@ -34,3 +34,11 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+######
+# SASS
+######
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
