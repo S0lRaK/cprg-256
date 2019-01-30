@@ -1,0 +1,57 @@
+@media all {
+  body {
+    background-color: blue;
+    font-family: 'Poller One', cursive;
+  }
+
+  p {
+    font-size: 125%;
+  }
+
+  img {
+    width: 200px;
+    height: auto;
+  }
+
+  figure {
+    float: left;
+  }
+
+  #pagecolumns {
+    /*set columns to 3*/
+    column-count: 3;
+    /*set width to 15px*/
+    column-gap: 15px;
+    /*add line between*/
+    column-rule: 2px outset black;
+  }
+}
+
+@media print {
+  body {
+    background-color: white;
+    font-family: Times;
+  }
+
+  p {
+    font-size: 75%;
+  }
+
+  img {
+    width: 200px;
+    height: auto;
+  }
+
+  figure {
+    float: left;
+  }
+
+  #pagecolumns {
+    /*set columns to 3*/
+    column-count: 1;
+    /*set width to 15px*/
+    /*column-gap: 15px;*/
+    /*add line between*/
+    /*column-rule: 2px outset black;*/
+  }
+}

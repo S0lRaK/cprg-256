@@ -1,0 +1,79 @@
+body {
+  font-family: Helvetica;
+  /*background-color: #ffffff;
+	opacity: 0.6;
+	background-image: url("photos/berlin_reichstag.jpg");
+	background-repeat: no-repeat;*/
+}
+
+#background {
+  position: fixed;
+  /*opacity: 0.6;
+	background-repeat: no-repeat;*/
+}
+
+#background img {
+  opacity: 0.5;
+  z-index: -99;
+}
+
+.header h1 {
+  /*text-align: center;*/
+  position: relative;
+  top: 60px;
+  left: 60px;
+}
+
+
+.header img {
+  float: left;
+  height: 50px;
+  width: auto;
+}
+
+.popularsites {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+}
+
+.popularsites h2 {
+  margin-left: 20%;
+}
+
+.history {
+  width: 50%;
+  border: 1px solid black;
+}
+
+.history p {
+  margin-top: 0;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+
+.history img {
+  width: 250px;
+  height: auto;
+  float: left;
+}
+
+.history figure {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+.history figcaption {
+  text-align: center;
+}
+
+#websites {
+  width: 20%;
+  position: absolute;
+  top: 25%;
+  right: 5%;
+}
