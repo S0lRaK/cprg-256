@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="New Hotels registration">
+    <meta name="author" content="Carlos J. Garcia Carmona">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Hotels registration</title>
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Righteous|ZCOOL+KuaiLe" rel="stylesheet">
+    <link href="stylesheets/stylesheet.css" rel="stylesheet">
+</head>
+
+<body>
+    <img id="background" src="images/jon-tyson-689050-unsplash.jpg" alt="Towel, stool, bathroom and shower curtain">
+
+    <h1>New Hotels<br>
+        <span>Registration</span>
+    </h1>
+    <form action="#" method="POST" target="_blank" autocomplete="on">
+        <fieldset>
+            <div>
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name"  pattern="[A-Za-z\-]{1}" required
+                placeholder="John Doe" maxlength="25">
+            </div>
+            <div>
+                <label for="age">Age</label>
+                <input id="age" type="number" name="age" min="18" max="130" value="18" required>
+            </div>
+            <div>
+                <label for="address">Address</label>
+                <input id="address" type="text" name="address" required
+                placeholder="234 Wellington Street Ottawa, Ontario, Canada K1A 0G9">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" required
+                placeholder="johndoe@example.com">
+            </div>
+            <div>
+                <label for="phone">Contact Phone</label>
+                <input id="phone" type="tel" name="phone" required size="12"
+                pattern="[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="XXX XXX XXXX">
+            </div>
+            <div>
+                <label for="date-registry">Registration Date</label>
+                <input id="date-registry" type="date" name="date-registry" required
+                min="2019-02-01" value="2019-02-01">
+            </div>
+        </fieldset>
+        <section id="buttons">
+            <input id="button-reset" type="reset"></button>
+            <input id="button-submit" type="submit"></button>
+        </section>
+    </form>
+
+    <section id="credit">
+        <span>Background photo by</span>
+        <a href="https://unsplash.com/@jontyson?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+            target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Jon Tyson">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <title>unsplash-logo</title>
+                    <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+                </svg>
+            </span>
+            <span>Jon Tyson</span>
+        </a>
+    </section>
+</body>
+
+</html>

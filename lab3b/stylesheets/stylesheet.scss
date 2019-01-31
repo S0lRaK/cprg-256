@@ -1,0 +1,137 @@
+$color-primary: rgb(245, 222, 179, .5);
+$font-title-primary: 'Righteous', cursive;
+$font-title-secondary: 'ZCOOL KuaiLe', cursive;;
+$font-content: 'Fredoka One', cursive;
+
+body {
+    font: 16px $font-content;
+}
+
+img#background {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+	
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+        
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+h1 {
+    position: relative;
+    font-family: $font-title-primary;
+    color: $color-primary;
+    text-align: center;
+
+    span {
+        font-family: $font-title-secondary;
+    }
+}
+
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    fieldset {
+        background-color: $color-primary;
+        border: none;
+        padding: 2vh 4vw;
+        height: 53vh;
+        width: 70%;
+        align-self: center;
+
+        div {
+            margin-bottom: 2vh;
+            display: flex;
+            flex-direction: column;
+
+            input {
+                font-family: $font-content;
+                margin-top: 1vh;
+                border: none;
+                padding: 0.3vh 1.5vw;
+                &#age { width: 3em; };
+                &#phone,&#date-registry { width: fit-content }
+            }
+        }
+    }
+
+    section#buttons {
+        margin-top: 4vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        input {
+            background-color: $color-primary;
+            border: $color-primary solid 2px;
+            color: black;
+            font-family: $font-content;
+            font-size: 1em;
+            padding: 1vh 1vw;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                border-radius: 10%;
+                background-color: black;
+                border-color: black;
+                color: white;
+                transition: .3s;
+            }
+        }
+    }
+}
+
+section#credit {
+    position: absolute;
+    bottom: 0;
+    padding: 1vh 1vw;
+    margin-bottom: 2vh;
+    background-color: $color-primary;
+    font-weight: 500;
+
+    span {
+        padding: 1vh 1vw;
+    }
+
+    a {
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        padding: 4px 6px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1.2;
+        display: inline-block;
+        border-radius: 3px;
+
+        span {
+            display: inline-block;
+            padding: 2px 3px;
+
+            svg {
+                height: 12px;
+                width: auto;
+                position: relative;
+                vertical-align: middle;
+                top: -2px;
+                fill: white;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+    img#background {
+        left: 50%;
+        margin-left: -512px;   /* 50% */
+    }
+}
