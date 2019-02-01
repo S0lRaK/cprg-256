@@ -42,7 +42,7 @@ form {
         background-color: $color-primary;
         border: none;
         padding: 2vh 4vw;
-        height: 53vh;
+        height: fit-content;
         width: 70%;
         align-self: center;
 
@@ -53,6 +53,7 @@ form {
 
             input {
                 font-family: $font-content;
+                font-size: 1em;
                 margin-top: 1vh;
                 border: none;
                 padding: 0.3vh 1.5vw;
@@ -63,7 +64,7 @@ form {
     }
 
     section#buttons {
-        margin-top: 4vh;
+        margin-top: 2vh;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
