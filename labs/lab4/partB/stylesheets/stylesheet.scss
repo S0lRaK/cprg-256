@@ -1,0 +1,123 @@
+$font-text: 'Mali', cursive;
+$font-print: 'Noto Sans SC', sans-serif;
+$font-header: 'Staatliches', cursive;
+$color-font-sidebar: white;
+$padding: 2%;
+
+@media all {
+    body {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        font-family: $font-text;
+        font-size: 16px;
+        background-color: lightgray;
+    }
+    
+    h2 { font-family: $font-header; }
+
+    h3 { margin: 0; }
+    
+    aside {
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        position: fixed;
+        height: 100%;
+        width: 20%;
+        padding: $padding;
+        background-color: steelblue;
+        color: $color-font-sidebar;
+        font-size: 0.9em;
+        div {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 20%;
+        }
+        #social-media,
+        #languages {
+            flex-direction: column;
+            a { margin-bottom: 5%; }
+            .heading {
+                margin-bottom: 0;
+                flex-direction: row;
+                i { margin-right: 5%; }
+            }
+            #languages-list {
+                flex-direction: column;
+                align-items: flex-start;
+                span { margin-bottom: 5%; }
+                .lang-level { opacity: .7; }
+            }
+        }
+        a {
+            text-decoration: none;
+            color: $color-font-sidebar;
+        }
+    }
+    
+    #container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        padding: $padding;
+        margin-left: 24%;
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-bottom: 2%;
+            border-bottom: 1px dotted steelblue;
+            img {
+                height: 20vh;
+                border-radius: 50%;
+            }
+            h1 { font-family: $font-header; }
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            ul { margin-top: 0; }
+            li {
+                display: flex;
+                flex-direction: column;
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+            span.date { opacity: .7; }
+            &#experience {
+                li:nth-child(2),
+                li:nth-child(4),
+                li:nth-child(6) { background-color: darkgrey; }
+                li {
+                    padding: 2%;
+                    border-radius: 1%;
+                    .job-title { font-weight: 600; }
+                    .time-period { opacity: .7; }
+                }
+            }
+        }
+    }
+}
+
+@media print {
+    body,
+    aside,
+    li {
+        background-color: white;
+        color: black;
+    }
+
+    body,
+    h1,
+    h2 {
+        font-family: $font-print;
+        color: black;
+    }
+}
