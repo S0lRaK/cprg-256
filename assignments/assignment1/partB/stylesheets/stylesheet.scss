@@ -1,0 +1,112 @@
+$font-primary: 'Bai Jamjuree', sans-serif;
+$font-title: 'Staatliches', cursive;
+$color-primary: blue;
+
+body {
+    width: 80%;
+    padding: 0 10%;
+    margin: 0;
+    font-family: $font-primary;
+    font-size: 16px;
+}
+
+#background-image {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1280px;
+	
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+        
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: .3;
+}
+
+h1 { font-family: $font-title; }
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    #logo {
+        max-width: 5%;
+        margin-right: 5%;
+    }
+}
+
+form {
+    position: relative;
+    background-color: rgba($color: $color-primary, $alpha: .3);
+    border-radius: 20%;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+    h2 { text-align: center; }
+    section {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 2vh 4vw;
+        height: fit-content;
+        align-self: center;
+        div {
+            margin-bottom: 2vh;
+            display: flex;
+            flex-direction: column;
+            input {
+                font-family: $font-primary;
+                font-size: 1em;
+                margin-top: 1vh;
+                border: 1px solid gray;
+                padding: 0.3vh 1.5vw;
+                &[name="age"],
+                &[name="date"],
+                &[name="postal-code"],
+                &[name="phone"],
+                &[name="income"] { width: fit-content; }
+            }
+            div {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                font-weight: normal;
+                input:nth-child(2),
+                input:nth-child(3),
+                input:nth-child(4) { margin-left: 5%; }
+            }
+        }
+    }
+
+    #buttons {
+        margin-top: 2vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        input {
+            background-color: $color-primary;
+            border: $color-primary solid 2px;
+            color: white;
+            font-family: $font-primary;
+            font-size: 1em;
+            padding: 1vh 1vw;
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+                border-radius: 10%;
+                background-color: black;
+                border-color: black;
+                transition: .3s;
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Carlos J. Garcia Carmona">
+    <title>Western Cascade Finance</title>
+    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:300,400,700|Staatliches" rel="stylesheet">
+    <link href="stylesheets/stylesheet.css" rel="stylesheet">
+</head>
+
+<body>
+    <img src="images/MaxPixel.freegreatpicture.com-Cascade-Nature-Mountains-Alpine-Waterfall-3204448.jpg"
+        alt="Cascade Nature Mountains Alpine Waterfall" id="background-image">
+    <header>
+        <img id="logo" src="images/cascade-finance-logo.jpg" alt="Cascade Finance logo">
+        <h1>Wertern Cascade Finance</h1>
+    </header>
+    <form action="applications@wcf.ab.ca" method="POST" target="_blank" autocomplete="on">
+        <h2>Application Form</h2>
+        <section id="contact-info">
+            <div>
+                <label for="date">Current Date</label>
+                <input id="date" type="date" name="date" required min="2019-02-11" value="2019-02-11">
+            </div>
+            <div>
+                <label for="name">First and Last Name</label>
+                <input id="name" type="text" name="name" pattern="^(([A-za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))" required
+                    placeholder="John Doe">
+            </div>
+            <div>
+                <label for="address">Street Address</label>
+                <input id="address" type="text" name="address" required placeholder="234 Wellington Street">
+            </div>
+            <div>
+                <label for="postal-code">Postal Code</label>
+                <input id="postal-code" type="text" name="postal-code" required
+                    pattern="^[ABCEGHJ-NPRSTVXY]{1}\d{1}[A-Z]{1}\s?\d{1}[A-Z]{1}\d{1}" placeholder="K1A 0G9">
+            </div>
+            <div>
+                <span>Phone Number</span>
+                <div id="phone-type">
+                    <input type="radio" name="phone" value="business">Business
+                    <input type="radio" name="phone" value="personal">Personal
+                </div>
+                <input id="phone" type="tel" name="phone" required
+                    pattern="(\d{3})(?:[-])(\d{3})[-](\d{4})" placeholder="XXX-XXX-XXXX">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" required placeholder="johndoe@example.com">
+            </div>
+        </section>
+        <section id="additional-info">
+            <div>
+                <span>Are you a current client?</span>
+                <div>
+                    <input type="radio" name="client" value="yes">Yes
+                    <input type="radio" name="client" value="no">No
+                </div>
+            </div>
+            <div>
+                <span>Gender</span>
+                <div>
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+                </div>
+            </div>
+            <div>
+                <label for="age">Age</label>
+                <input type="number" name="age" min="18" required>
+            </div>
+            <div>
+                <span>Housing</span>
+                <div>
+                    <input type="radio" name="housing" value="own">Owner
+                    <input type="radio" name="housing" value="rent">Rent
+                </div>
+            </div>
+            <div>
+                <label for="income">Annual Gross Income</label>
+                <input type="number" name="income" min="0" required placeholder="CAD$">
+            </div>
+        </section>
+        <section id="ownership">
+            <div>
+                <span>Do you own any of the following?</span>
+                <div>
+                    <input type="checkbox" name="ownership" value="vehicle">Vehicle
+                    <input type="checkbox" name="ownership" value="rrsp">RRSP
+                    <input type="checkbox" name="ownership" value="tfsa">TFSA
+                    <input type="checkbox" name="ownership" value="rrif">RRIF
+                </div>
+            </div>
+        </section>
+        <section id="buttons">
+            <input id="button-reset" type="reset"></button>
+            <input id="button-submit" type="submit"></button>
+        </section>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+body {
+  width: 80%;
+  padding: 0 10%;
+  margin: 0;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 16px;
+}
+
+#background-image {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1280px;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+h1 {
+  font-family: "Staatliches", cursive;
+}
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+header #logo {
+  max-width: 5%;
+  margin-right: 5%;
+}
+
+form {
+  position: relative;
+  background-color: rgba(0, 0, 255, 0.3);
+  border-radius: 20%;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  font-weight: bolder;
+}
+form h2 {
+  text-align: center;
+}
+form section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 2vh 4vw;
+  height: fit-content;
+  align-self: center;
+}
+form section div {
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: column;
+}
+form section div input {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1em;
+  margin-top: 1vh;
+  border: 1px solid gray;
+  padding: 0.3vh 1.5vw;
+}
+form section div input[name=age], form section div input[name=date], form section div input[name=postal-code], form section div input[name=phone], form section div input[name=income] {
+  width: fit-content;
+}
+form section div div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-weight: normal;
+}
+form section div div input:nth-child(2),
+form section div div input:nth-child(3),
+form section div div input:nth-child(4) {
+  margin-left: 5%;
+}
+form #buttons {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+form #buttons input {
+  background-color: blue;
+  border: blue solid 2px;
+  color: white;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1em;
+  padding: 1vh 1vw;
+  cursor: pointer;
+  transition: 0.3s;
+}
+form #buttons input:hover {
+  border-radius: 10%;
+  background-color: black;
+  border-color: black;
+  transition: 0.3s;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
