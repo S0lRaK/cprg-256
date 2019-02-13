@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    width: 90%;
+    padding: 0 5%;
+}
+
+section#nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+section#order-option {
+    .hidden { display: none; }
+    .visible { display: block; }
+}

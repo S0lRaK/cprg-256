@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Carlos J. Garcia Carmona">
+    <title>City Delicatessen</title>
+    <link href="stylesheets/stylesheet.css" rel="stylesheet">
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <h1>City Delicatessen</h1>
+    <p>What do you want to order?</p>
+    <section id="nav">
+        <div onclick="showSection(pizza)">
+            <span>Pizza</span>
+        </div>
+        <div onclick="showSection(sandwich)">
+            <span>Sandwich</span>
+        </div>
+        <div onclick="showSection(drink)">
+            <span>Drink</span>
+        </div>
+    </section>
+    <section id="order-option">
+        <div id="pizza" class="hidden">
+            <div class="option">
+                <span>Super Cheesy</span>
+            </div>
+            <div class="option">
+                <span>Extra Meaty</span>
+            </div>
+            <div class="option">
+                <span>Really Veggy</span>
+            </div>
+        </div>
+        <div id="sandwich" class="hidden">
+            <div class="option">
+                <span>All Garden Vegetarian</span>
+            </div>
+            <div class="option">
+                <span>Big Beef on a Bun</span>
+            </div>
+            <div class="option">
+                <span>Mixed Grill</span>
+            </div>
+            <div class="option">
+                <span>Grilled Pork</span>
+            </div>
+        </div>
+        <div id="drink" class="hidden">
+            <div class="option">
+                <span>Cola</span>
+            </div>
+            <div class="option">
+                <span>Orange</span>
+            </div>
+            <div class="option">
+                <span>Lemon</span>
+            </div>
+            <div class="option">
+                <span>Root Beer</span>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
