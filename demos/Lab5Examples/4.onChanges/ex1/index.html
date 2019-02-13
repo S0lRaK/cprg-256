@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OnChange Event</title>
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <h1>Example of On Change Event Handling</h1>
+  <h2>Convert between Imperial and Metric Lengths</h2>
+
+  <table>
+    <th>Imperial Value Feet</th>
+    <th>Metric Value Centimetres</th>
+    <tr>
+      <td><input type="number" min="0" id="imperial" onchange="convertImperialValue(this.value);"></td>
+      <td><input type="number" min="0" id="metric" onchange="convertMetricValue(this.value);"></td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

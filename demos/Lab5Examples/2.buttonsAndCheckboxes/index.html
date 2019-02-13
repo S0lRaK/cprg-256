@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Buttons and Check Boxes</title>
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <h1>Today is: <span id="dtfield"></span></h1>
+
+  <h1>Gift Box and Gift</h1>
+
+  <form name=costEstimation>
+    <table border=1>
+
+      <tr valign=top>
+        <td>
+          <b>Choose Your Box Type<b><br>
+              <input type=radio name=specialty value=5 checked>Plain Box<br>
+              <input type=radio name=specialty value=7>Deluxe Box<br>
+              <input type=radio name=specialty value=10>Premium Box<br>
+
+        </td>
+        <td>
+          <b>Choose The Gift </b><br>
+          <input type=checkbox name=earrings checked>Earrings<br>
+          <input type=checkbox name=broach>Broach<br>
+          <input type=checkbox name=watch>Watch<br>
+          <input type=checkbox name=necklace>Necklace<br>
+        </td>
+      </tr>
+
+    </table>
+    <br>
+    <br>
+    <input type=button value="Price your gift" onClick="buttonandchecks();">
+  </form>
+  <br>
+  <h2>Gift Description: </h2>
+  <h2><span id="result"></span></h2>
+
+</body>
+
+</html>

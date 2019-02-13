@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Page Control Set Visibility</title>
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <h1>Examples of how to control what is displayed on a page</h1>
+
+  <h2>Control <span style="font-size: 1.2em;background-color: lightgray;">Visibility</span> Property via Button <span style="font-style: italic;">onclick</span> event</h2>
+
+  <input type="button" value="Hide/Unhide" onclick="showOrHide()">
+  <div id="showthis" style="visibility:hidden;">
+    <h2>We can show or hide this message</h2>
+  </div>
+
+  <hr>
+
+  <h2>Control <span style="font-size: 1.2em;background-color: lightgray;">Visibility</span> Property via Radio Button <span style="font-style: italic;">onchange</span> event</h2>
+
+  <br>
+  <input type="radio" name="inputcontrol" value="1" onchange="setvisible(this.value)">Show Text Field 1</input>
+  <input type="radio" name="inputcontrol" value="2" onchange="setvisible(this.value)">Show Text Field 2</input>
+  <input type="radio" name="inputcontrol" value="3" onchange="setvisible(this.value)">Show Text Field 3</input>
+
+
+  <h2>Text Fields</h2>
+  <p>
+    <h3>Text Field 1</h3><input type="text" size="10" id="set1" style="visibility:hidden;">
+  </p>
+  <p>
+    <h3>Text Field 2</h3><input type="text" size="10" id="set2" style="visibility:hidden;">
+  </p>
+  <p>
+    <h3>Text Field 3</h3><input type="text" size="10" id="set3" style="visibility:hidden;">
+  </p>
+
+</body>
+
+</html>

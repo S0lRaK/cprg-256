@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>On Change Control Display Property</title>
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <h2>Control <span style="font-size: 1.2em;background-color: lightgray;">Display</span> Property via Radio Button <span style="font-style: italic;">onchange</span> event</h2>
+
+  <input type="radio" name="inputcontrol" value="1" onchange="setdisplay(this.value)">Show Text Field 1</input>
+  <input type="radio" name="inputcontrol" value="2" onchange="setdisplay(this.value)">Show Text Field 2</input>
+  <input type="radio" name="inputcontrol" value="3" onchange="setdisplay(this.value)">Show Text Field 3</input>
+
+
+  <h2>Text Fields</h2>
+  <p>
+    <h3>Text Field 1</h3><input type="text" size="10" id="set1" style="display:none;">
+  </p>
+  <p>
+    <h3>Text Field 2</h3><input type="text" size="10" id="set2" style="display:none;">
+  </p>
+  <p>
+    <h3>Text Field 3</h3><input type="text" size="10" id="set3" style="display:none;">
+  </p>
+
+</body>
+
+</html>
