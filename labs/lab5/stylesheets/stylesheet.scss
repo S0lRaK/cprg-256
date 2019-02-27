@@ -1,16 +1,158 @@
+$font-title: 'Charmonman', cursive;
+$font-primary: 'Cute Font', cursive;
+$color-primary: indigo;
+$color-secondary: royalblue;
+
+
 body {
-    margin: 0;
     width: 90%;
     padding: 0 5%;
+    margin: 0;
+    font-size: 16px;
+    font-family: $font-primary;
+    text-align: center;
 }
 
-section#nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+#background-image {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1280px;
+	
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+        
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: .2;
+    z-index: -1;
+}
+
+header {
+    #current-date {
+        text-align: right;
+        font-size: 1.3em;
+    }
+    h1 {
+        font-family: $font-title;
+        font-size: 3em;
+        color: $color-primary;
+        margin: 1% 0;
+    }
+    h2 {
+        background: repeating-linear-gradient(
+            45deg,
+            rgba($color-primary, .5),
+            rgba($color-primary, .5) 10px,
+            rgba($color-secondary, .5) 10px,
+            rgba($color-secondary, .5) 20px
+        );
+        color: white;
+        font-size: 2em;
+        font-weight: bold;
+        margin: 0;
+    }
+    section#nav {
+        position: relative;
+        border: dashed $color-primary 1px;
+        border-top: none;
+        margin-bottom: 1%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: 2em;
+        color: $color-primary;
+        div {
+            width: 33.3%;
+            padding: 1%;
+            cursor: pointer;
+        }
+        div:hover {
+            background-color: $color-primary;
+            color: white;
+        }
+    }
 }
 
 section#order-option {
+    position: relative;
+    display: flex;
     .hidden { display: none; }
-    .visible { display: block; }
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    div.option {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 3% 1% 4%;
+        border-radius: 15%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 1%;
+        img {
+            width: 90%;
+            border-radius: 5%;
+        }
+        .title { font-size: 1.5em; }
+        .size, .quantity {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2%;
+            input { width: 15%;}
+        }
+        .extra-toppings {
+            label { text-align: left; }
+            .toppings {
+                flex-direction: column;
+                .topping {
+                    flex-direction: row;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}
+
+section#contact {
+    display: flex;
+    flex-direction: row;
+    margin: 3% 0;
+    &.hidden { display: none; }
+    div {
+        text-align: left;
+        input#name { width: 70%; }
+        input#address { width: 90%; }
+        input#phone { width: fit-content; }
+    }
+}
+
+#submit-order {
+    width: 30%;
+    padding: 1%;
+    border-style: none;
+    margin-bottom: 1%;
+    background-color: $color-secondary;
+    color: white;
+    cursor: pointer;
+    &.hidden { display: none; }
+}
+
+#order { font-size: 2em; }
+
+select, input {
+    padding: 1%;
+    border-color: $color-secondary;
+    border-width: thin;
+    border-radius: 5%;
+    width: fit-content;
 }
