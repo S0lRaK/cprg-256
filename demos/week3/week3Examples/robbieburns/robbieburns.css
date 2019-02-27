@@ -1,0 +1,63 @@
+/*robbieburns.css*/
+
+body{
+	
+	background-color: #0033cc;
+
+}
+
+h1{
+	text-align: center;
+	font-family: 'Tangerine', cursive;
+	font-size: 500%;
+	font-weight: bold;
+	text-shadow: 4px -4px 4px dimgrey;
+}
+
+.poem{
+	
+border-style: solid;
+    border-width: 5px;
+border-color: black;
+
+border-radius: 15px;
+width: 70%;
+margin-left: 15%;
+margin-right: 15%;
+background-color: #4d79ff;
+font-family: 'Tangerine', cursive;
+opacity: 1;
+padding: 10px;
+
+}
+
+.picture{
+width: 40%;
+margin-left: 30%;
+margin-right: 30%;
+}
+
+.poem .picture img{
+width: 400px;
+	height: auto;
+	opacity: 0.75;
+
+}
+
+
+
+.poem p{
+
+font-family: 'Tangerine', cursive;
+font-size: 200%;
+font-weight: bolder;
+
+
+}
+
+.poem h2{
+	text-align: center;
+	font-family: 'Tangerine', cursive;
+	font-size: 300%;
+	font-weight: bold;
+}

@@ -1,0 +1,24 @@
+@charset "ISO-8859-1";
+
+body {
+  background-color: blue;
+}
+
+h1 {
+  font-family: "Times New Roman";
+  text-align: center;
+}
+
+table {
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  border: 20px;
+  width: 80%;
+}
+
+td {
+  text-align: center;
+  font-size: 28px;
+  color: red;
+}

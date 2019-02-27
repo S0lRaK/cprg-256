@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Data Attributes</title>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+
+  <fieldset>Choose one or more flavor(s):
+    <div>
+      <input type="checkbox" id="flavorCherry" value="1.00" data-item="Cherry" onchange="updatePrice()" name="flavor">
+      <label for="flavorCherry">Cherry ($1.00)</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="flavorBanana" value="2.50" data-item="Banana" onchange="updatePrice()" name="flavor">
+      <label for="flavorBanana">Banana ($2.50)</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="flavorStrawberry" value="3.00" data-item="Strawberry" onchange="updatePrice()" name="flavor">
+      <label for="flavorStrawberry">Strawberry ($3.00)</label>
+    </div>
+
+  </fieldset>
+
+  <div id="totalSection">
+    <ul id="flavorList">
+    </ul>
+    <p>Your Total Cost comes to $<span id="total"></span></p>
+  </div>
+
+
+</body>
+
+</html>

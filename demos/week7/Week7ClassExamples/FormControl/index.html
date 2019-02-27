@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Control</title>
+    <script src="globalarrayandfunctions.js"></script>
+</head>
+<body>
+    <form id="dataform">
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><input type="text" id="clientname" maxlength="25" size="20"></td>
+			</tr>
+			<tr>
+				<td>Address</td>
+				<td><input type="text" id="address" maxlength="25" size="20"></td>
+			</tr>
+			<tr>
+				<td>Phone</td>
+				<td><input type="tel" id="contactphone" maxlength="15" size="20"></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="email" id="email" maxlength="15" size="20"></td>
+			</tr>
+		</table>
+		<button value="submitdate" onclick="storedata(); return false;">Submit Data</button>
+
+	</form>
+
+	<form id="futurevalue">
+		<h1>Calculate Future Values</h1>
+		<br />
+
+		<table>
+			<tr>
+				<td>Principle</td>
+				<td><input type="number" id="principle" size="20" min="0" readonly></td>
+			</tr>
+			<tr>
+				<td>Years</td>
+				<td><input type="number" id="years" size="20" min="1" readonly></td>
+			</tr>
+		</table>
+
+		<br />
+		<h2>Interest is paid monthly</h2>
+
+		<!-- List interest rates -->
+
+		<select id="interestrate" disabled>
+			<option selected="selected">Choose your interest rate</option>
+			<option value=".05">5% </option>
+			<option value=".0575">5.75% </option>
+			<option value=".0625">6.25% </option>
+		</select>
+		<br>
+
+		<input type="submit" value="Future Value" onClick="calcfv();return false;">
+
+	</form>
+	<h1><span id="result"></span></h1>
+</body>
+</html>

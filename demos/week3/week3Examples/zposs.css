@@ -1,0 +1,40 @@
+body{
+	background-image: url(pics/NASA_logo.png);
+	background-repeat: no-repeat;
+	
+	z-index: 1;
+}
+
+
+#jpl_logo{
+	width: 350px;
+	height: auto;
+	float: left;
+	top: 5px;
+	left: 5px;
+	z-index: 2;
+}
+
+figure{
+	
+	float: right;
+	position: absolute;
+	bottom: 0%;
+	right: 25%;
+
+}
+figure img{
+ 	width: 400px;
+ 	height: auto;	
+ 	opacity: 0.75;
+	}
+
+figcaption{
+	
+	font-family: arial, helvetica, sans-serif;
+	font-size: 150%;
+	
+
+}
+
+
