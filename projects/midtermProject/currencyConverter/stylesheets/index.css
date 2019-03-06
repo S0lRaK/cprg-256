@@ -1,0 +1,63 @@
+body {
+  font-size: 16px;
+  font-family: "B612", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "B612 Mono", monospace;
+}
+
+h1,
+div#rate {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 1%;
+  margin-bottom: 2%;
+}
+
+section#converter > div {
+  margin: 0 5%;
+}
+section#converter div#source,
+section#converter div#target {
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#converter div#source h2,
+section#converter div#target h2 {
+  align-self: flex-start;
+}
+section#converter div#source .btn-group,
+section#converter div#target .btn-group {
+  width: 100%;
+  margin-bottom: 2%;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  section#converter div#source .btn-group,
+section#converter div#target .btn-group {
+    flex-direction: row;
+  }
+  section#converter div#source .input-group,
+section#converter div#target .input-group {
+    width: 30%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

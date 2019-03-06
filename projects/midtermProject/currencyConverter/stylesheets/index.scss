@@ -1,0 +1,70 @@
+$font-heading: "B612 Mono", monospace;
+$font-primary: "B612", sans-serif;
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+body {
+	font-size: 16px;
+	font-family: $font-primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-heading;
+}
+
+h1,
+div#rate {
+	text-align: center;
+}
+
+h1 {
+	margin: 0;
+}
+
+header {
+	background-color: black;
+	color: white;
+	padding: 1%;
+	margin-bottom: 2%;
+}
+
+section#converter {
+	> div {
+		margin: 0 5%;
+	}
+	div#source,
+	div#target {
+		margin-bottom: 2%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		h2 {
+			align-self: flex-start;
+		}
+		.btn-group {
+			width: 100%;
+			margin-bottom: 2%;
+			flex-direction: column;
+		}
+	}
+}
+
+@media (min-width: $tablet-width) {
+	section#converter {
+		div#source,
+		div#target {
+			.btn-group {
+				flex-direction: row;
+			}
+			.input-group {
+				width: 30%;
+			}
+		}
+	}
+}

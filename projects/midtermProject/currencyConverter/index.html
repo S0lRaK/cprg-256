@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="author" content="Carlos J. Garcia Carmona" />
+		<title>Currency Converter</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=B612|B612+Mono"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="stylesheets/index.css" />
+		<script src="js/index.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<h1>Currency Converter</h1>
+		</header>
+		<section id="converter">
+			<div id="source">
+				<h2>Source</h2>
+				<div class="btn-group" role="group" aria-label="Source Currencies">
+					<button
+						type="button"
+						class="btn btn-primary"
+						onclick="setSourceCurrency(event, 'cad')"
+					>
+						Canadian Dollar
+					</button>
+					<button
+						type="button"
+						class="btn btn-secondary"
+						onclick="setSourceCurrency(event, 'euro')"
+					>
+						Euro
+					</button>
+					<button
+						type="button"
+						class="btn btn-secondary"
+						onclick="setSourceCurrency(event, 'yen')"
+					>
+						Japanese Yen
+					</button>
+					<button
+						type="button"
+						class="btn btn-secondary"
+						onclick="setSourceCurrency(event, 'pound')"
+					>
+						UK Pound Sterling
+					</button>
+					<button
+						type="button"
+						class="btn btn-secondary"
+						onclick="setSourceCurrency(event, 'usd')"
+					>
+						US Dollar
+					</button>
+				</div>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<div class="input-group-text" id="input-prepend-source">C$</div>
+					</div>
+					<input
+						id="input-source"
+						type="number"
+						class="form-control"
+						value="1"
+						aria-label="Input amount"
+						aria-describedby="btnGroupAddon"
+						oninput="convertAmount()"
+					/>
+				</div>
+			</div>
+			<div id="target">
+				<h2>Target</h2>
+				<div class="btn-group" role="group" aria-label="Target Currencies">
+					<button
+						type="button"
+						class="btn btn-secondary"
+						onclick="setTargetCurrency(event, 'cad')"
+					>
+						Canadian Dollar
+					</button>
+					<button
+						type="button"
+						class="btn btn-secondary"
+						onclick="setTargetCurrency(event, 'euro')"
+					>
+						Euro
+					</button>
+					<button
+						type="button"
+						class="btn btn-secondary"
+						onclick="setTargetCurrency(event, 'yen')"
+					>
+						Japanese Yen
+					</button>
+					<button
+						type="button"
+						class="btn btn-secondary"
+						onclick="setTargetCurrency(event, 'pound')"
+					>
+						UK Pound Sterling
+					</button>
+					<button
+						type="button"
+						class="btn btn-primary"
+						onclick="setTargetCurrency(event, 'usd')"
+					>
+						US Dollar
+					</button>
+				</div>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<div class="input-group-text" id="input-prepend-target">US$</div>
+					</div>
+					<input
+						id="input-target"
+						type="text"
+						class="form-control"
+						value="0.75"
+						aria-label="Input amount"
+						aria-describedby="btnGroupAddon"
+						readonly
+					/>
+				</div>
+			</div>
+			<div id="rate">
+				<span id="source-rate">1 Canadian Dollar</span> =
+				<span id="target-rate">0.75 US Dollar</span>
+				<p><small>Rates as March 5, 2019</small></p>
+			</div>
+		</section>
+	</body>
+</html>
