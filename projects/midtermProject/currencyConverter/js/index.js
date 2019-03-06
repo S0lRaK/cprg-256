@@ -89,24 +89,24 @@ function convertAmount() {
 
 	switch (targetCurrency) {
 		case "Canadian Dollar":
-			targetAmount = sourceAmount * sourceRate * RATE_CAD;
-			exchangeRate = RATE_CAD;
+    exchangeRate = sourceRate * RATE_CAD;  
+    targetAmount = sourceAmount * exchangeRate;
 			break;
 		case "Euro":
-			targetAmount = sourceAmount * sourceRate * RATE_EURO;
-			exchangeRate = RATE_EURO;
+    exchangeRate = sourceRate * RATE_EURO;  
+    targetAmount = sourceAmount * exchangeRate;
 			break;
 		case "Japanese Yen":
-			targetAmount = sourceAmount * sourceRate * RATE_YEN;
-			exchangeRate = RATE_YEN;
+    exchangeRate = sourceRate * RATE_YEN;  
+    targetAmount = sourceAmount * exchangeRate;
 			break;
 		case "UK Pound Sterling":
-			targetAmount = sourceAmount * sourceRate * RATE_POUND;
-			exchangeRate = RATE_POUND;
+    exchangeRate = sourceRate * RATE_POUND;  
+    targetAmount = sourceAmount * exchangeRate;
 			break;
 		case "US Dollar":
-			targetAmount = sourceAmount * sourceRate * RATE_USD;
-			exchangeRate = RATE_USD;
+    exchangeRate = sourceRate * RATE_USD;  
+    targetAmount = sourceAmount * exchangeRate;
 			break;
 	}
 
@@ -118,9 +118,9 @@ function convertAmount() {
 function setExchangeRate(targetCurrency, exchangeRate) {
 	let sourceCurrency = document.querySelector("#source button.btn-primary")
 		.innerText;
-	let sourceRate = document.querySelector("#source-rate");
-	let targetRate = document.querySelector("#target-rate");
+	let sourceRateElement = document.querySelector("#source-rate");
+	let targetRateElement = document.querySelector("#target-rate");
 
-	sourceRate.innerHTML = "1 " + sourceCurrency;
-	targetRate.innerHTML = exchangeRate + " " + targetCurrency;
+	sourceRateElement.innerHTML = "1 " + sourceCurrency;
+	targetRateElement.innerHTML = exchangeRate.toFixed(2) + " " + targetCurrency;
 }
