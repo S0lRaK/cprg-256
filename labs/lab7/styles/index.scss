@@ -1,0 +1,31 @@
+$font: 'Roboto';
+$space: 5%;
+$mobile-width: 425px;
+
+body {
+  font-family: $font;
+  font-size: 16px;
+  padding: $space;
+}
+
+section#input {
+  div:first-child { margin-bottom: 1%; }
+  button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+section#output { padding: $space / 2; }
+
+@media (max-width: $mobile-width) {
+  body { font-size: 32px; }
+  section#input {
+    .input-group { 
+      flex-direction: column;
+      span, input { width: 100%; }
+    }
+  }
+}
