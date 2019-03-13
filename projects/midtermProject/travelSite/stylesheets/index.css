@@ -1,0 +1,108 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Mali", cursive;
+  font-size: 16px;
+}
+
+#background {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1280px;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+header,
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  padding: 2%;
+}
+
+header {
+  justify-content: space-evenly;
+}
+header #logo {
+  width: 10%;
+  height: 10%;
+}
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #e45762;
+  text-shadow: 0 0 1em #f7b94d, 0 0 0.2em #f7b94d;
+}
+
+section#slideshow {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#slideshow figure {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0 0 2%;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+section#slideshow figure.active {
+  opacity: 1;
+  transition: opacity 1s;
+}
+section#slideshow figure.inactive {
+  opacity: 0;
+  display: none;
+  transition: opacity 1s;
+}
+section#slideshow figure img {
+  width: 100%;
+  max-height: 50vh;
+  border-radius: 5%;
+  margin-bottom: 2%;
+}
+section#slideshow figure figcaption {
+  text-align: center;
+}
+
+footer section {
+  display: flex;
+  width: 40%;
+}
+footer section i {
+  margin-right: 5%;
+  color: #e45762;
+}
+footer section#address-info {
+  flex-direction: row;
+  align-items: center;
+}
+footer section#contact-info {
+  flex-direction: column;
+}
+footer section#contact-info div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer section#contact-info div:first-child {
+  margin-bottom: 2%;
+}
+
+/*# sourceMappingURL=index.css.map */
