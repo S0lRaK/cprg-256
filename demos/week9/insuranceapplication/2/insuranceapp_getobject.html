@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insurance Application</title>
+<meta name="author" content="aschmidt" >
+<meta name="date" content="2019-03-11T15:43:22-0700" >
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link href="insurance.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="insuranceapp_getdata.js"></script>
+</head>
+<body>
+<div id="background">
+<div id="application">
+<h1 style="text-align: center;">Welcome to Kwality Insurance</h1>
+<h2 class="italicstyle"style="text-align: center;">We won't burn you with high premiums!</h2>
+<br>
+<h2>Please Complete the Following Registration</h2>
+
+<form id="register" onsubmit="register();return false">
+<table>
+	<tr><td>Last Name</td><td><input type="text" id="lastname" size="15" pattern="[A-Za-z]{1,15}" required="true"></td></tr>
+	<tr><td>First Name</td><td><input type="text" id="firstname" size="15" pattern="[A-Za-z]{1,15}" required="true"></td></tr>
+	<tr><td>Address</td><td><input type="text" id="address" size="25" required="true"></td></tr>
+	<tr><td>Postal Code</td><td><input type="text" id="postalcode" placeholder="A1A1A1" size="8"pattern="[ABCEGHJKLMNPRSTVXY][0-9][ABCEGHJKLMNPRSTVWXYZ][0-9][ABCEGHJKLMNPRSTVWXYZ][0-9]" required="true"></td></tr>
+</table>
+<input type="submit" value="Submit">
+</form>
+<br>
+<form action="calculatepremium()" id="appform">
+<h2>Driver Profile - Please Register First!</h2>
+
+<div id="driverprofile" >
+
+<select name="Traffice Tickets" size="5" id="tickets" disabled="true" onchange="controlinfo();return false;">
+<option value="0">0 Ticket</option>
+<option value="1">1 Ticket</option>
+<option value="2" >2 Tickets</option>
+<option value="3">3 Tickets</option>
+<option value="4">4 or more Tickets</option>
+</select>
+<br>
+<br>
+<br>
+<table>
+<tr><td>Age</td><td><input type="number" size="4"  id="age" min="16" readonly="true" ></td></tr>
+<tr><td>Car Value</td><td><input type="number" size="8" id="carvalue" min="1000" readonly="true"></td></tr>
+</table>
+
+</div>
+
+<input type="button" id="submitbutton" value="Calculate Premium" onclick="calculatepremium();return false;" disabled="true">
+<!-- Display area this will only display after premium is calculated -->
+
+
+
+
+</div>
+</div>
+</body>
+</html>

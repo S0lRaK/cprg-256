@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cookies</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="cookies.js"></script>
+	<link href="cookies.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="currentCookieState()">
+<h1>Examples of how cookies can work</h1>
+
+<h2>You MUST open this file through <a href="http://localhost/cookies/cookies.html">http://localhost/cookies/cookies.html</a></h2>
+
+<h3>The values in the following fields are read from a cookie </h3>
+	<label class="label" for="username">Username: </label>
+	<input class="input" type="text" id="username" size="20"> 
+	<input type="button" onclick="setUsernameCookie()" value="Set Username Cookie" name="Test">
+	<br>
+
+	<label class="label" for="firstname">Firstname: </label>
+	<input class="input" type="text" id="firstname" size="20">
+	<input type="button" onclick="setFnameCookie()" value="Set Firstname Cookie" name="Test">
+	<br>
+
+	<label class="label" for="lastname">Lastname: </label>
+	<input class="input" type="text" id="lastname" size="20">
+	<input type="button" onclick="setLnameCookie()" value="Set Lastname Cookie" name="Test">	
+	<br>
+
+<h3>The values in the following fields are read from a cookie </h3>
+	<label class="label" for="username">Username: </label>
+	<input class="output" disabled="true" type="text" id="ousername" size="20"> <br>
+
+	<label class="label" for="firstname">Firstname: </label>
+	<input class="output" disabled="true" type="text" id="ofirstname" size="20"><br>
+
+	<label class="label" for="lastname">Lastname: </label>
+	<input class="output" disabled="true" type="text" id="olastname" size="20"> <br>
+	
+<input type="button" onclick="setDefaultCookie()" value="Set Cookie To Default Values" name="Test">
+
+<div>
+	<p><a href="second.html">Next Page</a></p>
+</div>
+</body>
+</html>
