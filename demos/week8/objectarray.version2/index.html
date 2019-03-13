@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Arrays and Objects</title>
+    <script src="arrayofobjects.js"></script>
+  </head>
+
+  <body>
+    <h2>Please Complete the Following Registration</h2>
+
+    <form id="register" name="register" onsubmit="addToArray();return false">
+      <table>
+        <tr>
+          <td>Last Name</td>
+          <td>
+            <input
+              type="text"
+              id="lastname"
+              size="15"
+              pattern="[A-Za-z]{1,15}"
+              required="true"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>First Name</td>
+          <td>
+            <input
+              type="text"
+              id="firstname"
+              size="15"
+              pattern="[A-Za-z]{1,15}"
+              required="true"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td><input type="text" id="address" size="25" required="true" /></td>
+        </tr>
+        <tr>
+          <td>Postal Code</td>
+          <td>
+            <input
+              type="text"
+              id="postalcode"
+              placeholder="A1A1A1"
+              size="8"
+              pattern="[ABCEGHJKLMNPRSTVXY][0-9][ABCEGHJKLMNPRSTVWXYZ][0-9][ABCEGHJKLMNPRSTVWXYZ][0-9]"
+              required="true"
+            />
+          </td>
+        </tr>
+      </table>
+
+      <h3>Select the following items</h3>
+      <input
+        type="radio"
+        name="businesstype"
+        value="commercial"
+        checked
+      />Commercial
+      <br />
+      <input type="radio" name="businesstype" value="residential" />Residential
+      <br />
+      <input type="radio" name="residence" value="city" checked />City
+      <br />
+      <input type="radio" name="residence" value="rural" />Rural
+      <br />
+      <input type="checkbox" name="truck" value="truck" />Truck
+      <br />
+      <input type="checkbox" name="car" value="car" />Car
+      <br />
+      <input type="checkbox" name="rv" value="rv" />RV
+      <br />
+      <br />
+      <input type="submit" value="Submit" id="submit" />&nbsp;&nbsp;<input
+        type="button"
+        value="Edit"
+        disabled="true"
+        id="edit"
+        onclick="setClientObject();return false"
+      />
+    </form>
+    <h2>Select one of the following clients to edit</h2>
+    <h3><span id="showlist"></span></h3>
+  </body>
+</html>
