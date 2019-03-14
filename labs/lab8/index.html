@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="author" content="Carlos J. Garcia Carmona" />
+		<title>CPRG-256 Lab 8</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/index.css" />
+	</head>
+	<body>
+		<header>
+			<h1 class="display-4 text-center">CPRG-256 Lab 8</h1>
+			<h2 class="display-4 text-center text-muted">Local & Session Storage</h2>
+		</header>
+		<section id="input">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">First and last name</span>
+				</div>
+				<input
+					type="text"
+					aria-label="First name"
+					class="form-control"
+					id="first-name"
+				/>
+				<input
+					type="text"
+					aria-label="Last name"
+					class="form-control"
+					id="last-name"
+				/>
+			</div>
+			<button
+				type="button"
+				class="btn btn-outline-primary btn-lg btn-block"
+				onclick="add()"
+			>
+				<i class="material-icons">add</i>
+				Add
+			</button>
+		</section>
+		<section id="output">
+			<ol class="list-group"></ol>
+			<button
+				type="button"
+				id="button-delete-all"
+				class="btn btn-outline-danger btn-lg btn-block d-none"
+				onclick="deleteAll()"
+			>
+				<i class="material-icons">delete</i>
+				Delete All
+			</button>
+		</section>
+	</body>
+	<script src="js/main.js"></script>
+</html>
