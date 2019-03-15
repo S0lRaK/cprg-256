@@ -63,11 +63,10 @@ function display() {
 	}
 
 	if (persons.length > 0) {
-		buttonDeleteAll.classList.replace("d-none", "d-flex");	
+		buttonDeleteAll.classList.replace("d-none", "d-flex");
 	} else {
-		buttonDeleteAll.classList.replace("d-flex", "d-none");	
+		buttonDeleteAll.classList.replace("d-flex", "d-none");
 	}
-	
 }
 
 function deleteListElement(element) {
@@ -87,7 +86,7 @@ function deleteListElement(element) {
 	for (let index = personId; index < localStorage.length + 1; index++) {
 		const personNum = parseInt(index) + 1;
 		const person = JSON.parse(localStorage["person" + personNum]);
-		person.id = person.id -1;
+		person.id = person.id - 1;
 		saveData(person);
 		localStorage.removeItem("person" + personNum);
 	}
@@ -116,4 +115,12 @@ function deleteAll() {
 	display();
 
 	localStorage.clear();
+}
+
+function checkKey(event) {
+	let keyPressed = event.keyCode;
+
+	if (keyPressed == 13) {
+		add();
+	}
 }
