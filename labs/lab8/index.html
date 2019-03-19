@@ -9,20 +9,30 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<meta name="author" content="Carlos J. Garcia Carmona" />
 		<title>CPRG-256 Lab 8</title>
+		<!-- Bootstrap -->
 		<link
 			rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 			crossorigin="anonymous"
 		/>
+		<!-- Material Web Components -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/material-components-web/dist/material-components-web.min.css"
+		/>
+		<script src="https://unpkg.com/material-components-web/dist/material-components-web.min.js"></script>
+		<!-- Material Icons -->
 		<link
 			href="https://fonts.googleapis.com/icon?family=Material+Icons"
 			rel="stylesheet"
 		/>
+		<!-- Google Fonts -->
 		<link
 			href="https://fonts.googleapis.com/css?family=Roboto"
 			rel="stylesheet"
 		/>
+		<!-- Custom styles -->
 		<link rel="stylesheet" href="styles/index.css" />
 	</head>
 	<body>
@@ -31,6 +41,20 @@
 			<h2 class="display-4 text-center text-muted">Local & Session Storage</h2>
 		</header>
 		<section id="input">
+			<div class="mdc-switch">
+				<div class="mdc-switch__track"></div>
+				<div class="mdc-switch__thumb-underlay">
+					<div class="mdc-switch__thumb">
+						<input
+							type="checkbox"
+							id="basic-switch"
+							class="mdc-switch__native-control"
+							role="switch"
+						/>
+					</div>
+				</div>
+			</div>
+			<label for="basic-switch">off/on</label>
 			<div class="input-group">
 				<div class="input-group-prepend">
 					<span class="input-group-text">First and last name</span>

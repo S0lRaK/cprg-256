@@ -1,3 +1,10 @@
+const switcher = document.querySelector(".mdc-switch");
+
+switcher.addEventListener("click", event => {
+	switcher.classList.toggle("mdc-switch--checked");
+	event.target.toggleAttribute("checked");
+});
+
 let persons = [];
 
 window.onload = init;
@@ -123,4 +130,8 @@ function checkKey(event) {
 	if (keyPressed == 13) {
 		add();
 	}
+}
+
+function setSwitchState(that) {
+	console.log(that);
 }
