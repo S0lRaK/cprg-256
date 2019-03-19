@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ajax Display</title>
+<meta name="generator" content="Bluefish 2.2.7" >
+<meta name="author" content="aschmidt" >
+<meta name="date" content="2016-03-03T13:47:09-0700" >
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link href="classdemo_2.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"  src="xmlhandler.js">
+
+</script>
+
+</head>
+<body>
+
+<h2>Using Ajax to Display Content</h2>
+
+<div class="carpics">
+<table>
+<tr><td>
+<figure>
+<img src="pics/exner1.jpg"  alt="exner concept car" id="carpic1">
+<figcaption>Concept Car by Virgil Exner Jr.</figcaption>
+</figure>
+
+</td>
+<td>
+<figure>
+<img  src="pics/shelby_daytona1.jpg"  alt="shelby daytona" id="carpic2">
+<figcaption>Shelby Daytona</figcaption>
+</figure>
+
+</td>
+<td>
+<figure>
+<img src="pics/countach1.jpg"  alt="lamborghini coutach" id="carpic3">
+<figcaption>Lamborghini Countach</figcaption>
+</figure>
+
+</td>
+
+</tr>
+</table>
+
+</div>
+
+<div id="carinfo">
+
+</div>
+
+
+</body>
+</html>

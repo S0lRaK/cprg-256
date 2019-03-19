@@ -1,0 +1,17 @@
+//java script to process and display files
+
+var xhr;
+
+function getXMLFile() {
+	var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      document.getElementById("parsedxml").innerHTML = xhr.responseXML;
+    }
+  };
+  xhr.open("GET", "data.xml", true);
+  xhr.send();
+	
+
+
+}

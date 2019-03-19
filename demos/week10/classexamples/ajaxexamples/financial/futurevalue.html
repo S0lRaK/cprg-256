@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="fvcalc.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Future Value Calculator</title>
+</head>
+<body>
+<h1>Calculate Future Values</h1>
+<br/>
+<br/>
+<br/>
+<h2>Interest is paid monthly</h2>
+
+<!-- List interest rates -->
+
+<select id="interestrate">
+	<option selected="selected">Choose your interest rate</option>
+	<option value=".05">5% </option>
+	<option value=".0575">5.75% </option>
+	<option value=".0625">6.25% </option>
+</select>
+<br></br>
+<br></br>
+<br></br>
+<table>
+<tr><td>Principle</td><td><input type ="text" id="principle" size="20"></input></td></tr>
+<tr><td>Years</td><td><input type ="text" id="years" size="20"></input></td></tr>
+</table>
+
+<input type ="submit" value="Future Value" onClick="calcfv()"></input>
+
+<h2>Your Future Value is: </h2><h2><span id="result"></span></h2>
+</body>
+</html>

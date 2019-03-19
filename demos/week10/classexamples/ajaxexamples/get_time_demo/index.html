@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>AjaxDemo1</title>
+<meta name="generator" content="Bluefish 2.2.4" >
+<meta name="author" content="aschmidt" >
+<meta name="date" content="2016-01-04T11:51:39-0700" >
+<!--javascript to call AJAX Demo-->
+<script>
+var xmlhttp;
+
+function AJAXDemo()
+{
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange= handleData;
+
+xmlhttp.open("GET", "GetTime.php", true);
+
+xmlhttp.send();
+}
+
+function handleData()
+{
+	if (xmlhttp.readyState==4 && xmlhttp.status==200)
+	{
+	alert (xmlhttp.responseText);
+	}
+
+}
+
+</script>
+</head>
+<body onload="AJAXDemo();">
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Basic JSON Object</title>
+<meta name="generator" content="Bluefish 2.2.7" >
+<meta name="author" content="aschmidt" >
+<meta name="date" content="2016-03-21T10:27:45-0700" >
+<meta name="copyright" content="">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link href="classdemo_2.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function displayStudent() 
+{
+	
+var student = { "studentid" :  "55555", "name" : "Alex Schmidt", "gpa" : "4.0" };
+document.getElementById("name").innerHTML=student.name;
+document.getElementById("id").innerHTML=student.studentid;
+document.getElementById("gpa").innerHTML=student.gpa;
+}
+</script>
+
+</head>
+<body onload="displayStudent()">
+<h2 id="name"></h2>
+<h2 id="id"></h2>
+<h2 id="gpa"></h2>
+</body>
+</html>

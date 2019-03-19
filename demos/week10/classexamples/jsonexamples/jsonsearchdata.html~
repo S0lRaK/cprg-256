@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JSON search</title>
+<meta name="author" content="aschmidt" >
+<meta name="date" content="2019-03-15T13:35:13-0700" >
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="jsonfilehandler.js"></script>
+</head>
+<body>
+<h2>Example of search JSON file</h2>
+<br>
+<h2>Search on first name, last name,</h2>
+
+</body>
+</html>

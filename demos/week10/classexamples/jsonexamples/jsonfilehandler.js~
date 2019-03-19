@@ -1,0 +1,55 @@
+/*jsonfilehandler.js*/
+var xhr = new XMLHttpRequest();
+var r;
+window.onload=loaddata;
+function loaddata() {
+	//event listener
+	document.getElementById("fullname").addEventListener("keyup", function (){ searchFullName(this.value);},false);
+	
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+     r = xhr.JSONparse(responseText);
+      //displayData(r);
+    }
+  };
+  xhr.open("GET", "employeedata.json", true);
+  xhr.send();
+	
+	
+	
+
+}
+
+function searchFullName(fullname) {
+	
+	//var r=JSON.parse(xhr.responseText);
+	document.getElementById("searchvalue").innerHTML="Search by Full Name"+"<br>";
+	var output="";
+	var searchname;
+	for(var i=0; i<r.length; i++)
+	{
+		var obj=r[i];
+		searchname=obj.name;
+		if(searchname.startsWith(name))
+		{	
+				
+					output+="<tr><td>"
+					output+=obj.name;
+					output+="</td><td>"
+					output+=obj.address
+					output+="</td><td>"
+					output+=obj.city
+					output+="</td><td>"
+					output+=obj.idnumber
+					output+="</td><td>"
+					output+=obj.company
+					output+="</td></tr>";
+			}
+				
+	}
+document.getElementById("searchresults").innerHTML=output;
+
+
+}
+
+

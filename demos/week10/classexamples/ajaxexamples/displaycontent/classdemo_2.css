@@ -1,0 +1,39 @@
+body{
+background-color: lightyellow;
+}
+
+img
+{
+ width: 300px;
+ height: auto;
+}
+
+h2, h1
+{
+	font-family: Arial, Helvetica;
+	text-align: center;
+	font-size: 95%;
+}
+
+p
+{
+	font-family: Arial, Helvetica;
+	text-align: center;
+	font-size: 125%;
+
+}
+
+
+figcaption
+{
+font-family: Arial, Helvetica;
+font-size: 90%;
+
+}
+
+.carpics
+{
+ width: 70%;
+ margin-left: 15%;
+ margin-right: 15%;
+}

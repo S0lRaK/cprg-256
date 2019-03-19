@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Financial Index</title>
+<meta name="generator" content="Bluefish 2.2.7" >
+<meta name="author" content="aschmidt" >
+<meta name="date" content="2016-03-12T13:47:33-0700" >
+<meta name="copyright" content="">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="expires" content="0">
+<script type="text/javascript" src="ajaxfinance.js"></script>
+<script type="text/javascript" src="fvcalc.js"></script>
+<script type="text/javascript" src="mortgagecalc.js"></script>
+</head>
+<body>
+<h1>Welcome to Finance Page</h1>
+<br>
+<table>
+<tr><td>Name</td><td><input type="text" id="name"></td></tr>
+
+</table>
+<input type="button" id="fvalue" value="Future Value" onclick="getCalcFV()">
+<input type="button" id="mcalc" value="Mortgage Calculator" onclick="getMortgage()">
+<div id="displayapp">
+</div>
+</body>
+</html>

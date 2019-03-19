@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Processing XML files</title>
+<meta name="generator" content="Bluefish 2.2.10" >
+<meta name="author" content="aschmidt" >
+<meta name="date" content="2018-03-27T10:47:18-0700" >
+<meta name="copyright" content="">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+<meta http-equiv="content-style-type" content="text/css">
+<link href="classdemo_2.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="xmlprocess.js">
+</script>
+</head>
+<body>
+<h1>Search XML Data</h1>
+<br>
+<h2>Search for a Last Name</h2>
+<br>
+<input type="text" value="searchname" onchange="findClient()" id="searchname">
+
+<table id="parsedxml">
+
+</table>
+</body>
+</html>
