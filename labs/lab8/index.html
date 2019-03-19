@@ -41,20 +41,24 @@
 			<h2 class="display-4 text-center text-muted">Local & Session Storage</h2>
 		</header>
 		<section id="input">
-			<div class="mdc-switch">
-				<div class="mdc-switch__track"></div>
-				<div class="mdc-switch__thumb-underlay">
-					<div class="mdc-switch__thumb">
-						<input
-							type="checkbox"
-							id="basic-switch"
-							class="mdc-switch__native-control"
-							role="switch"
-						/>
+			<div id="theme-switcher">
+				<span>Light Theme</span>
+				<div class="mdc-switch">
+					<div class="mdc-switch__track"></div>
+					<div class="mdc-switch__thumb-underlay">
+						<div class="mdc-switch__thumb">
+							<input
+								type="checkbox"
+								id="basic-switch"
+								class="mdc-switch__native-control"
+								role="switch"
+							/>
+						</div>
 					</div>
 				</div>
+				<span>Dark Theme</span>
+				<!-- <label for="basic-switch">off/on</label> -->
 			</div>
-			<label for="basic-switch">off/on</label>
 			<div class="input-group">
 				<div class="input-group-prepend">
 					<span class="input-group-text">First and last name</span>

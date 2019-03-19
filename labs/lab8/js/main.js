@@ -3,6 +3,7 @@ const switcher = document.querySelector(".mdc-switch");
 switcher.addEventListener("click", event => {
 	switcher.classList.toggle("mdc-switch--checked");
 	event.target.toggleAttribute("checked");
+	setTheme();
 });
 
 let persons = [];
@@ -132,6 +133,27 @@ function checkKey(event) {
 	}
 }
 
-function setSwitchState(that) {
-	console.log(that);
+function setTheme() {
+	let htmlElement = document.querySelector("html");
+	let bodyElement = document.querySelector("body");
+	let h1Element = document.querySelector("h1");
+	let spanElements = document.querySelector("#theme-switcher").querySelectorAll("span");
+
+	if (switcher.classList.contains("mdc-switch--checked")) {
+		htmlElement.setAttribute("style", "background-color: black;");
+		bodyElement.setAttribute("style", "background-color: black;");
+		h1Element.setAttribute("style", "color: white;");
+		
+		spanElements.forEach(span =>  {
+			span.setAttribute("style", "color: white;")
+		});
+	} else {
+		htmlElement.setAttribute("style", "background-color: white;");
+		bodyElement.setAttribute("style", "background-color: white;");
+		h1Element.setAttribute("style", "color: #212529;");
+
+		spanElements.forEach(span =>  {
+			span.setAttribute("style", "color: #212529;")
+		});
+	}
 }
