@@ -1,17 +1,9 @@
-const switcher = document.querySelector(".mdc-switch");
-
-switcher.addEventListener("click", event => {
-	switcher.classList.toggle("mdc-switch--checked");
-	event.target.toggleAttribute("checked");
-	setTheme();
-});
-
 let persons = [];
 
 window.onload = init;
 
 function init() {
-	retrieveData();
+	retrieveStorage();
 	display();
 }
 
@@ -106,14 +98,20 @@ function saveData(item) {
 	localStorage.setItem("person" + item.id, JSON.stringify(item));
 }
 
-function retrieveData() {
+function retrieveStorage() {
 	const data = localStorage.getItem("person1");
+	const theme = sessionStorage.getItem("theme");
 
 	if (data) {
 		for (let index = 1; index < localStorage.length + 1; index++) {
 			const person = JSON.parse(localStorage["person" + index]);
 			persons.push(person);
 		}
+	}
+
+	if (theme == "dark") {
+		setSwitcher();
+		setTheme(theme);
 	}
 }
 
@@ -133,27 +131,54 @@ function checkKey(event) {
 	}
 }
 
-function setTheme() {
+const switcher = document.querySelector(".mdc-switch");
+
+switcher.addEventListener("click", event => {
+	setSwitcher(event);
+	setTheme();
+});
+
+function setTheme(theme) {
 	let htmlElement = document.querySelector("html");
 	let bodyElement = document.querySelector("body");
 	let h1Element = document.querySelector("h1");
-	let spanElements = document.querySelector("#theme-switcher").querySelectorAll("span");
+	let spanElements = document
+		.querySelector("#theme-switcher")
+		.querySelectorAll("span");
 
-	if (switcher.classList.contains("mdc-switch--checked")) {
+	if (theme == "dark" || switcher.classList.contains("mdc-switch--checked")) {
 		htmlElement.setAttribute("style", "background-color: black;");
 		bodyElement.setAttribute("style", "background-color: black;");
 		h1Element.setAttribute("style", "color: white;");
-		
-		spanElements.forEach(span =>  {
-			span.setAttribute("style", "color: white;")
+
+		spanElements.forEach(span => {
+			span.setAttribute("style", "color: white;");
 		});
+		saveTheme("dark");
 	} else {
 		htmlElement.setAttribute("style", "background-color: white;");
 		bodyElement.setAttribute("style", "background-color: white;");
 		h1Element.setAttribute("style", "color: #212529;");
 
-		spanElements.forEach(span =>  {
-			span.setAttribute("style", "color: #212529;")
+		spanElements.forEach(span => {
+			span.setAttribute("style", "color: #212529;");
 		});
+		saveTheme("light");
+	}
+}
+
+function saveTheme(theme) {
+	sessionStorage.setItem("theme", theme);
+}
+
+function setSwitcher(event) {
+	switcher.classList.toggle("mdc-switch--checked");
+
+	let inputElement = document.querySelector("#basic-switch");
+
+	if (event) {
+		event.target.toggleAttribute("checked");
+	} else {
+		inputElement.toggleAttribute("checked");
 	}
 }
