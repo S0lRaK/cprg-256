@@ -1,20 +1,26 @@
 let filterSelected = "id";
 
 function search() {
-	const inputElement = document.querySelector("#search-term-input");
+  const inputElement = document.querySelector("#search-term-input");
+  let inputValue = inputElement.value;
+
 	let searchResults;
 
 	if (filterSelected == "id") {
 		searchResults = clientData.filter(client => {
-			return client.id == inputElement.value;
+			return client.id == inputValue;
 		});
 	} else if (filterSelected == "lastName") {
+    let firstLetter = inputValue.charAt(0).toUpperCase();
+    let otherLetters = inputValue.slice(1).toLowerCase();
+    let capitalized = firstLetter + otherLetters;
+
 		searchResults = clientData.filter(client => {
-			return client.lastName.includes(inputElement.value);
+			return client.lastName.includes(capitalized);
 		});
 	} else if (filterSelected == "phone") {
 		searchResults = clientData.filter(client => {
-			return client.phone.includes(inputElement.value);
+			return client.phone.includes(inputValue);
 		});
 	}
 
