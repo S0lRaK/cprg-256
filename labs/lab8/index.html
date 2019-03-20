@@ -37,12 +37,18 @@
 	</head>
 	<body>
 		<header>
-			<h1 class="display-4 text-center">CPRG-256 Lab 8</h1>
+			<h1 class="display-4 text-center theme-change">CPRG-256 Lab 8</h1>
 			<h2 class="display-4 text-center text-muted">Local & Session Storage</h2>
+			<section id="info">
+				<p class="text-center theme-change">
+					The list of names uses <em>LocalStorage</em> so it persists after closing the tab.<br>
+					The theme uses <em>SessionStorage</em> and persists only in the same tab, even after refreshing.
+				</p>
+			</section>
 		</header>
 		<section id="input">
 			<div id="theme-switcher">
-				<span>Light Theme</span>
+				<span class="theme-change">Light Theme</span>
 				<div class="mdc-switch">
 					<div class="mdc-switch__track"></div>
 					<div class="mdc-switch__thumb-underlay">
@@ -56,7 +62,7 @@
 						</div>
 					</div>
 				</div>
-				<span>Dark Theme</span>
+				<span class="theme-change">Dark Theme</span>
 				<!-- <label for="basic-switch">off/on</label> -->
 			</div>
 			<div class="input-group">

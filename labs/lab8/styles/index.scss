@@ -8,6 +8,13 @@ body {
   padding: $space;
 }
 
+header {
+  section#info {
+    border-bottom: solid 1px black;
+    margin-bottom: 2%;
+  }
+}
+
 section#input {
   #theme-switcher {
     display: flex;

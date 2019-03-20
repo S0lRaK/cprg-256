@@ -141,28 +141,30 @@ switcher.addEventListener("click", event => {
 function setTheme(theme) {
 	let htmlElement = document.querySelector("html");
 	let bodyElement = document.querySelector("body");
-	let h1Element = document.querySelector("h1");
-	let spanElements = document
-		.querySelector("#theme-switcher")
-		.querySelectorAll("span");
+	let textElements = document.querySelectorAll(".theme-change");
+	let sectionInfoElement = document.querySelector("#info");
 
 	if (theme == "dark" || switcher.classList.contains("mdc-switch--checked")) {
 		htmlElement.setAttribute("style", "background-color: black;");
 		bodyElement.setAttribute("style", "background-color: black;");
-		h1Element.setAttribute("style", "color: white;");
 
-		spanElements.forEach(span => {
-			span.setAttribute("style", "color: white;");
+		textElements.forEach(element => {
+			element.setAttribute("style", "color: white;");
 		});
+
+		sectionInfoElement.setAttribute("style", "border-color: white;");
+
 		saveTheme("dark");
 	} else {
 		htmlElement.setAttribute("style", "background-color: white;");
 		bodyElement.setAttribute("style", "background-color: white;");
-		h1Element.setAttribute("style", "color: #212529;");
 
-		spanElements.forEach(span => {
-			span.setAttribute("style", "color: #212529;");
+		textElements.forEach(element => {
+			element.setAttribute("style", "color: #212529;");
 		});
+
+		sectionInfoElement.setAttribute("style", "border-color: black;");
+
 		saveTheme("light");
 	}
 }
