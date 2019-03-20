@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="author" content="Carlos J. Garcia Carmona" />
+		<title>CPRG-256 Lab 9</title>
+		<!-- Bootstrap -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<!-- Material Icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto"
+			rel="stylesheet"
+		/>
+		<!-- Custom styles -->
+		<link rel="stylesheet" href="styles/index.css" />
+		<!-- Custom scripts -->
+		<script src="js/ClientData.js"></script>
+		<script src="js/main.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1 class="display-4 text-center">CPRG-256 Lab 9</h1>
+			<h2 class="display-4 text-center text-muted">
+				JSON Data Format & JavaScript Objects
+			</h2>
+			<section id="info">
+				<p class="text-center">
+					The JSON file with the data has been refactored to an
+					<em>array of objects</em>.
+				</p>
+			</section>
+		</header>
+		<section id="searcher" class="d-flex flex-column justify-content-between">
+			<section
+				id="filters"
+				class="d-flex flex-row justify-content-around align-items-center"
+			>
+				<button
+					type="button"
+          class="btn btn-outline-primary btn-sm active"
+          data-filter="id"
+					onclick="filter('id')"
+				>
+					ID
+				</button>
+				<button
+					type="button"
+          class="btn btn-outline-primary btn-sm"
+          data-filter="lastName"
+					onclick="filter('lastName')"
+				>
+					Last Name
+				</button>
+				<button
+					type="button"
+          class="btn btn-outline-primary btn-sm"
+          data-filter="phone"
+					onclick="filter('phone')"
+				>
+					Phone
+				</button>
+			</section>
+			<div class="input-group align-self-center" id="search-term">
+				<div class="input-group-prepend">
+					<span class="input-group-text">Search Term</span>
+				</div>
+				<input
+					type="text"
+					aria-label="Search term"
+					class="form-control"
+					id="search-term-input"
+					onkeydown="checkKey(event)"
+				/>
+			</div>
+			<button
+				type="button"
+				class="btn btn-outline-primary btn-lg btn-block"
+				onclick="search()"
+			>
+				<i class="material-icons">search</i>
+				Search
+			</button>
+		</section>
+		<section id="search-result">
+      <ol class="list-group"></ol>
+    </section>
+	</body>
+</html>

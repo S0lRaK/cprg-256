@@ -1,0 +1,37 @@
+$font: "Roboto";
+$space: 5%;
+$mobile-width: 425px;
+
+body {
+	font-family: $font;
+	font-size: 16px;
+	padding: $space;
+}
+
+header {
+	section#info {
+		border-bottom: dotted 1px black;
+		margin-bottom: 2%;
+	}
+}
+section#searcher {
+  margin-bottom: 1%;
+	button {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+  }
+  #filters,
+  #search-term { margin-bottom: 2%; }
+  #search-term { width: 50%; }
+}
+
+@media (max-width: $mobile-width) {
+  body { font-size: 24px; }
+  header { height: 100vh; }
+  section#searcher {
+    #search-term { width: 100%; }
+  }
+  section#search-result { font-size: 16px; }
+}

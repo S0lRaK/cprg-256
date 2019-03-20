@@ -1,0 +1,47 @@
+body {
+  font-family: "Roboto";
+  font-size: 16px;
+  padding: 5%;
+}
+
+header section#info {
+  border-bottom: dotted 1px black;
+  margin-bottom: 2%;
+}
+
+section#searcher {
+  margin-bottom: 1%;
+}
+section#searcher button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+section#searcher #filters,
+section#searcher #search-term {
+  margin-bottom: 2%;
+}
+section#searcher #search-term {
+  width: 50%;
+}
+
+@media (max-width: 425px) {
+  body {
+    font-size: 24px;
+  }
+
+  header {
+    height: 100vh;
+  }
+
+  section#searcher #search-term {
+    width: 100%;
+  }
+
+  section#search-result {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
