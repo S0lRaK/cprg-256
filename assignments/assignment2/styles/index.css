@@ -1,0 +1,170 @@
+body {
+  width: 90%;
+  padding: 0 5% 5%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Cute Font", cursive;
+  text-align: center;
+}
+
+#background-image {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1280px;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+header #current-date {
+  text-align: right;
+  font-size: 1.3em;
+}
+header h1 {
+  font-family: "Charmonman", cursive;
+  font-size: 3em;
+  color: indigo;
+  margin: 1% 0;
+}
+header h2 {
+  background: repeating-linear-gradient(45deg, rgba(75, 0, 130, 0.5), rgba(75, 0, 130, 0.5) 10px, rgba(65, 105, 225, 0.5) 10px, rgba(65, 105, 225, 0.5) 20px);
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+header section#nav {
+  position: relative;
+  border: dashed indigo 1px;
+  border-top: none;
+  margin-bottom: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 2em;
+  color: indigo;
+}
+header section#nav div {
+  width: 33.3%;
+  padding: 1%;
+  cursor: pointer;
+}
+header section#nav div:hover {
+  background-color: indigo;
+  color: white;
+}
+
+section#order-option {
+  position: relative;
+  display: flex;
+}
+section#order-option .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 3% 1% 4%;
+  border-radius: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+section#order-option .item .item-selection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+}
+section#order-option .item .item-selection .item-types,
+section#order-option .item .item-selection .item-inputs {
+  display: flex;
+  flex-direction: row;
+}
+section#order-option .item .item-selection .item-types {
+  justify-content: center;
+  margin-bottom: 2%;
+}
+section#order-option .item .item-selection .item-types div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}
+section#order-option .item .item-selection .item-types img {
+  width: 50%;
+  border-radius: 5%;
+}
+section#order-option .item .item-selection .item-inputs {
+  justify-content: space-around;
+}
+section#order-option .item .item-selection .item-inputs div {
+  display: flex;
+  flex-direction: column;
+}
+section#order-option .item .item-selection .item-inputs div .toppings .topping {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+section#order-option .hidden {
+  display: none;
+}
+
+section#contact {
+  display: flex;
+  flex-direction: row;
+  margin: 3% 0;
+}
+section#contact.hidden {
+  display: none;
+}
+section#contact div {
+  text-align: left;
+}
+section#contact div input#name {
+  width: 70%;
+}
+section#contact div input#address {
+  width: 90%;
+}
+section#contact div input#phone {
+  width: fit-content;
+}
+
+button {
+  width: 30%;
+  padding: 1%;
+  border-style: none;
+  margin-bottom: 1%;
+  background-color: royalblue;
+  color: white;
+  cursor: pointer;
+}
+button.disabled {
+  background-color: darkgray;
+  color: black;
+  cursor: none;
+}
+button.hidden {
+  display: none;
+}
+
+#order {
+  font-size: 2em;
+}
+
+select,
+input {
+  padding: 1%;
+  border-color: royalblue;
+  border-width: thin;
+  border-radius: 5%;
+  width: fit-content;
+}
+
+/*# sourceMappingURL=index.css.map */
