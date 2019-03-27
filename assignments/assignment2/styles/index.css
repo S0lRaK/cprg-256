@@ -1,5 +1,4 @@
 body {
-  width: 90%;
   padding: 0 5% 5%;
   margin: 0;
   font-size: 16px;
@@ -63,6 +62,7 @@ header section#nav div:hover {
 section#order-option {
   position: relative;
   display: flex;
+  margin-bottom: 2%;
 }
 section#order-option .option {
   display: flex;
@@ -123,13 +123,17 @@ section#order-option .hidden {
 section#contact {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin: 3% 0;
 }
 section#contact.hidden {
   display: none;
 }
 section#contact div {
-  text-align: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 section#contact div input#name {
   width: 70%;
@@ -142,13 +146,22 @@ section#contact div input#phone {
 }
 
 button {
-  width: 30%;
+  font-size: 2em;
   padding: 1%;
   border-style: none;
   margin-bottom: 1%;
   background-color: royalblue;
   color: white;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+button#checkout {
+  width: 100%;
+  border-radius: 0;
 }
 button.disabled {
   background-color: darkgray;

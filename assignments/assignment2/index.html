@@ -6,6 +6,13 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<meta name="author" content="Carlos J. Garcia Carmona" />
 		<title>CPRG-256 Assignment 2</title>
+		<!-- Bootstrap -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
 		<!-- Material Icons -->
 		<link
 			href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -76,10 +83,10 @@
 							<div class="size">
 								<label for="size">Size:</label>
 								<select name="size">
-									<option value="extra-large">Extra Large $16.50</option>
-									<option value="large">Large $14.00</option>
-									<option value="medium">Medium $11.50</option>
-									<option value="small">Small $8.50</option>
+									<option value="16.5">Extra Large $16.50</option>
+									<option value="14">Large $14.00</option>
+									<option value="11.5">Medium $11.50</option>
+									<option value="8.5">Small $8.50</option>
 								</select>
 							</div>
 							<div class="quantity">
@@ -103,7 +110,7 @@
 										<input
 											type="checkbox"
 											name="extra-toppings"
-											value="cheese"
+											value="Extra Cheese"
 										/>
 									</div>
 									<div class="topping">
@@ -111,7 +118,7 @@
 										<input
 											type="checkbox"
 											name="extra-toppings"
-											value="pepperoni"
+											value="Pepperoni"
 										/>
 									</div>
 									<div class="topping">
@@ -119,7 +126,7 @@
 										<input
 											type="checkbox"
 											name="extra-toppings"
-											value="mushrooms"
+											value="Mushrooms"
 										/>
 									</div>
 									<div class="topping">
@@ -127,7 +134,7 @@
 										<input
 											type="checkbox"
 											name="extra-toppings"
-											value="bacon"
+											value="Bacon"
 										/>
 									</div>
 									<div class="topping">
@@ -135,14 +142,20 @@
 										<input
 											type="checkbox"
 											name="extra-toppings"
-											value="olives"
+											value="Olives"
 										/>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<button class="disabled" disabled>
+					<button
+						type="button"
+						class="disabled add-to-order"
+						data-option="pizza"
+						disabled
+					>
+						<i class="material-icons">add</i>
 						Add
 					</button>
 				</div>
@@ -155,12 +168,12 @@
 									alt="Vegetarian Sandwich"
 								/>
 								<span class="title">All Garden Vegetarian</span>
-								<span class="price">$7.50</span>
+								<span class="price" data-price="7.5">$7.50</span>
 							</div>
 							<div class="item" data-option="sandwich">
 								<img src="images/Sandwich_Beef.jpg" alt="Beef Sandwich" />
 								<span class="title">Big Beef on a Bun</span>
-								<span class="price">$8.50</span>
+								<span class="price" data-price="8.5">$8.50</span>
 							</div>
 							<div class="item" data-option="sandwich">
 								<img
@@ -168,12 +181,12 @@
 									alt="Mixed Grill Sandwich"
 								/>
 								<span class="title">Mixed Grill</span>
-								<span class="price">$9.50</span>
+								<span class="price" data-price="9.5">$9.50</span>
 							</div>
 							<div class="item" data-option="sandwich">
 								<img src="images/Sandwich_Pork.jpg" alt="Pork Sandwich" />
 								<span class="title">Grilled Pork</span>
-								<span class="price">$9.50</span>
+								<span class="price" data-price="9.5">$9.50</span>
 							</div>
 						</div>
 						<div id="sandwich-inputs" class="item-inputs">
@@ -192,7 +205,13 @@
 							</div>
 						</div>
 					</div>
-					<button class="disabled" disabled>
+					<button
+						type="button"
+						class="disabled add-to-order"
+						data-option="sandwich"
+						disabled
+					>
+						<i class="material-icons">add</i>
 						Add
 					</button>
 				</div>
@@ -223,9 +242,9 @@
 							<div class="size">
 								<label for="size">Size:</label>
 								<select name="size">
-									<option value="large">Large $2.00</option>
-									<option value="medium">Medium $1.75</option>
-									<option value="small">Small $1.25</option>
+									<option value="2">Large $2.00</option>
+									<option value="1.75">Medium $1.75</option>
+									<option value="1.25">Small $1.25</option>
 								</select>
 							</div>
 							<div class="quantity">
@@ -243,10 +262,19 @@
 							</div>
 						</div>
 					</div>
-					<button class="disabled" disabled>
+					<button
+						type="button"
+						class="disabled add-to-order"
+						data-option="drink"
+						disabled
+					>
+						<i class="material-icons">add</i>
 						Add
 					</button>
 				</div>
+			</section>
+			<section id="order">
+				<ol class="list-group d-flex flex-column"></ol>
 			</section>
 			<section id="contact" class="hidden">
 				<div>
@@ -282,8 +310,9 @@
 					/>
 				</div>
 			</section>
-			<button type="submit" id="checkout" class="hidden">Checkout</button>
-			<section id="order"></section>
+			<button type="submit" id="checkout" class="hidden">
+				Order
+			</button>
 		</form>
 	</body>
 </html>

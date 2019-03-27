@@ -4,7 +4,6 @@ $color-primary: indigo;
 $color-secondary: royalblue;
 
 body {
-	width: 90%;
 	padding: 0 5% 5%;
 	margin: 0;
 	font-size: 16px;
@@ -79,6 +78,7 @@ header {
 section#order-option {
 	position: relative;
 	display: flex;
+	margin-bottom: 2%;
 	.option {
 		display: flex;
 		flex-direction: column;
@@ -142,12 +142,16 @@ section#order-option {
 section#contact {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	margin: 3% 0;
 	&.hidden {
 		display: none;
 	}
 	div {
-		text-align: left;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		input#name {
 			width: 70%;
 		}
@@ -161,13 +165,22 @@ section#contact {
 }
 
 button {
-	width: 30%;
+	font-size: 2em;
 	padding: 1%;
 	border-style: none;
 	margin-bottom: 1%;
 	background-color: $color-secondary;
 	color: white;
 	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	&#checkout {
+		width: 100%;
+		border-radius: 0;
+	}
 	&.disabled {
 		background-color: darkgray;
 		color: black;
