@@ -64,7 +64,7 @@ section#order-option {
   position: relative;
   display: flex;
 }
-section#order-option .item {
+section#order-option .option {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,38 +75,43 @@ section#order-option .item {
   border-radius: 5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-section#order-option .item .item-selection {
+section#order-option .option .item-selection {
   display: flex;
   flex-direction: column;
   margin-bottom: 2%;
 }
-section#order-option .item .item-selection .item-types,
-section#order-option .item .item-selection .item-inputs {
+section#order-option .option .item-selection .item-types,
+section#order-option .option .item-selection .item-inputs {
   display: flex;
   flex-direction: row;
 }
-section#order-option .item .item-selection .item-types {
+section#order-option .option .item-selection .item-types {
   justify-content: center;
   margin-bottom: 2%;
 }
-section#order-option .item .item-selection .item-types div {
+section#order-option .option .item-selection .item-types .item {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 25%;
+  cursor: pointer;
 }
-section#order-option .item .item-selection .item-types img {
+section#order-option .option .item-selection .item-types .item img {
   width: 50%;
   border-radius: 5%;
 }
-section#order-option .item .item-selection .item-inputs {
+section#order-option .option .item-selection .item-types .item.selected {
+  padding: 1%;
+  box-shadow: 0 4px 8px 0 royalblue, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+section#order-option .option .item-selection .item-inputs {
   justify-content: space-around;
 }
-section#order-option .item .item-selection .item-inputs div {
+section#order-option .option .item-selection .item-inputs div {
   display: flex;
   flex-direction: column;
 }
-section#order-option .item .item-selection .item-inputs div .toppings .topping {
+section#order-option .option .item-selection .item-inputs div .toppings .topping {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

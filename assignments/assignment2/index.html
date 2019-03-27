@@ -47,24 +47,24 @@
 		</header>
 		<form onsubmit="order(event)">
 			<section id="order-option">
-				<div id="pizza" class="item hidden">
+				<div id="pizza" class="option hidden">
 					<div class="item-selection">
 						<div id="pizza-types" class="item-types">
-							<div>
+							<div class="item" data-option="pizza">
 								<img
 									src="images/Pizza_Super-Cheesy.jpg"
 									alt="Super Cheesy Pizza"
 								/>
 								<span class="title">Super Cheesy</span>
 							</div>
-							<div>
+							<div class="item" data-option="pizza">
 								<img
 									src="images/Pizza_Extra-Meaty.jpg"
 									alt="Extra Meaty Pizza"
 								/>
 								<span class="title">Extra Meaty</span>
 							</div>
-							<div>
+							<div class="item" data-option="pizza">
 								<img
 									src="images/Pizza_Really-Veggy.jpg"
 									alt="Really Veggy Pizza"
@@ -92,6 +92,7 @@
 									value="0"
 									size="2"
 									onchange="enableAddToOrder('pizza')"
+									disabled
 								/>
 							</div>
 							<div class="extra-toppings">
@@ -145,10 +146,10 @@
 						Add
 					</button>
 				</div>
-				<div id="sandwich" class="item hidden">
+				<div id="sandwich" class="option hidden">
 					<div class="item-selection">
 						<div id="sandwich-types" class="item-types">
-							<div>
+							<div class="item" data-option="sandwich">
 								<img
 									src="images/Sandwich_Vegetarian.jpg"
 									alt="Vegetarian Sandwich"
@@ -156,12 +157,12 @@
 								<span class="title">All Garden Vegetarian</span>
 								<span class="price">$7.50</span>
 							</div>
-							<div>
-								<img src="images/Sandwich_Beef.jpg" alt="Beed Sandwich" />
+							<div class="item" data-option="sandwich">
+								<img src="images/Sandwich_Beef.jpg" alt="Beef Sandwich" />
 								<span class="title">Big Beef on a Bun</span>
 								<span class="price">$8.50</span>
 							</div>
-							<div>
+							<div class="item" data-option="sandwich">
 								<img
 									src="images/Sandwich_Grill.jpg"
 									alt="Mixed Grill Sandwich"
@@ -169,7 +170,7 @@
 								<span class="title">Mixed Grill</span>
 								<span class="price">$9.50</span>
 							</div>
-							<div>
+							<div class="item" data-option="sandwich">
 								<img src="images/Sandwich_Pork.jpg" alt="Pork Sandwich" />
 								<span class="title">Grilled Pork</span>
 								<span class="price">$9.50</span>
@@ -186,6 +187,7 @@
 									value="0"
 									size="2"
 									onchange="enableAddToOrder('sandwich')"
+									disabled
 								/>
 							</div>
 						</div>
@@ -194,22 +196,22 @@
 						Add
 					</button>
 				</div>
-				<div id="drink" class="item hidden">
+				<div id="drink" class="option hidden">
 					<div class="item-selection">
 						<div id="drink-types" class="item-types">
-							<div>
+							<div class="item" data-option="drink">
 								<img src="images/Drink_Cola.jpg" alt="Cola can drink" />
 								<span class="title">Cola</span>
 							</div>
-							<div>
+							<div class="item" data-option="drink">
 								<img src="images/Drink_Orange.jpg" alt="Orange can drink" />
 								<span class="title">Orange</span>
 							</div>
-							<div>
+							<div class="item" data-option="drink">
 								<img src="images/Drink_Lemon.jpg" alt="Lemon can drink" />
 								<span class="title">Lemon</span>
 							</div>
-							<div>
+							<div class="item" data-option="drink">
 								<img
 									src="images/Drink_Root-Beer.jpg"
 									alt="Root Beer can drink"
@@ -236,6 +238,7 @@
 									value="0"
 									size="2"
 									onchange="enableAddToOrder('drink')"
+									disabled
 								/>
 							</div>
 						</div>

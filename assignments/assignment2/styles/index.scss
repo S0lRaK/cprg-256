@@ -79,7 +79,7 @@ header {
 section#order-option {
 	position: relative;
 	display: flex;
-	.item {
+	.option {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -101,15 +101,21 @@ section#order-option {
 			.item-types {
 				justify-content: center;
 				margin-bottom: 2%;
-				div {
+				.item {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
 					width: 25%;
+					cursor: pointer;
+					img {
+						width: 50%;
+						border-radius: 5%;
+					}
 				}
-				img {
-					width: 50%;
-					border-radius: 5%;
+				.item.selected {
+					padding: 1%;
+					box-shadow: 0 4px 8px 0 $color-secondary,
+						0 6px 20px 0 rgba(0, 0, 0, 0.19);
 				}
 			}
 			.item-inputs {
