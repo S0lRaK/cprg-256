@@ -133,9 +133,7 @@ section#order-option {
 				}
 			}
 		}
-	}
-	.hidden {
-		display: none;
+		&.hidden { display: none; }
 	}
 }
 
@@ -144,9 +142,6 @@ section#contact {
 	flex-direction: row;
 	justify-content: center;
 	margin: 3% 0;
-	&.hidden {
-		display: none;
-	}
 	div {
 		width: 100%;
 		display: flex;
@@ -162,6 +157,22 @@ section#contact {
 			width: fit-content;
 		}
 	}
+}
+
+section#order-request {
+	&.hidden { display: none; }
+	section#order-option,
+	section#order-list,
+	section#contact {
+		&.hidden {
+			display: none;
+		}
+	}
+}
+
+section#order-list,
+section#order-confirmation {
+	font-size: 2em;
 }
 
 button {
@@ -180,6 +191,7 @@ button {
 	&#checkout {
 		width: 100%;
 		border-radius: 0;
+		i { margin-right: 2%;}
 	}
 	&.disabled {
 		background-color: darkgray;
@@ -189,10 +201,6 @@ button {
 	&.hidden {
 		display: none;
 	}
-}
-
-#order {
-	font-size: 2em;
 }
 
 select,

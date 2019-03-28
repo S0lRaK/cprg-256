@@ -116,7 +116,7 @@ section#order-option .option .item-selection .item-inputs div .toppings .topping
   flex-direction: row;
   justify-content: flex-end;
 }
-section#order-option .hidden {
+section#order-option .option.hidden {
   display: none;
 }
 
@@ -125,9 +125,6 @@ section#contact {
   flex-direction: row;
   justify-content: center;
   margin: 3% 0;
-}
-section#contact.hidden {
-  display: none;
 }
 section#contact div {
   width: 100%;
@@ -143,6 +140,20 @@ section#contact div input#address {
 }
 section#contact div input#phone {
   width: fit-content;
+}
+
+section#order-request.hidden {
+  display: none;
+}
+section#order-request section#order-option.hidden,
+section#order-request section#order-list.hidden,
+section#order-request section#contact.hidden {
+  display: none;
+}
+
+section#order-list,
+section#order-confirmation {
+  font-size: 2em;
 }
 
 button {
@@ -163,6 +174,9 @@ button#checkout {
   width: 100%;
   border-radius: 0;
 }
+button#checkout i {
+  margin-right: 2%;
+}
 button.disabled {
   background-color: darkgray;
   color: black;
@@ -170,10 +184,6 @@ button.disabled {
 }
 button.hidden {
   display: none;
-}
-
-#order {
-  font-size: 2em;
 }
 
 select,

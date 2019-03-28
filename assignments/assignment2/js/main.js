@@ -54,19 +54,25 @@ function setClickAdd() {
 	});
 }
 
-function showSection(section) {
-	hideOtherSections(section);
-	let selectedSection = document.getElementById(section.id);
+function showOrderOption(orderOption) {
+	hideOtherSections(orderOption); 
+
+	const orderOptionSectionElement = document.querySelector("#order-option");
+	orderOptionSectionElement.classList.remove("hidden");
+	const orderRequestSectionElement = document.querySelector("#order-request");
+	orderRequestSectionElement.classList.remove("hidden");
+
+	const selectedSection = document.getElementById(orderOption.id);
 
 	if (selectedSection.classList.contains("hidden"))
 		selectedSection.classList.toggle("hidden");
 }
 
-function hideOtherSections(visibleSection) {
-	let sections = ["pizza", "sandwich", "drink"];
+function hideOtherSections(visibleOption) {
+	const sections = ["pizza", "sandwich", "drink"];
 
 	for (const section of sections) {
-		if (visibleSection.id != section)
+		if (visibleOption.id != section)
 			document.getElementById(section).classList.add("hidden");
 	}
 }
@@ -157,7 +163,7 @@ function addToOrder(event, button) {
 
 		displayOrders();
 		showContactSection();
-		showOrderButton();
+		showCheckoutButton();
 	}
 }
 
@@ -167,13 +173,16 @@ function showContactSection() {
 }
 
 function displayOrders() {
-	const list = document.querySelector("#order ol");
+	const list = document.querySelector("#order-list ol");
 
 	list.innerHTML = "";
 
 	customer.orders.forEach(order => {
 		const listItem = document.createElement("li");
-		listItem.setAttribute("class", "list-group-item d-flex flex-row justify-content-between");
+		listItem.setAttribute(
+			"class",
+			"list-group-item d-flex flex-row justify-content-between"
+		);
 
 		const quantityElement = document.createElement("span");
 		quantityElement.innerText = order.quantity + " ";
@@ -197,10 +206,39 @@ function displayOrders() {
 		listItem.append(quantityElement, itemElement, priceElement);
 
 		list.append(listItem);
-	})
+	});
 }
 
-function showOrderButton() {
+function showCheckoutButton() {
 	const orderButton = document.getElementById("checkout");
 	orderButton.classList.remove("hidden");
+}
+
+function order(event) {
+	event.preventDefault();
+
+	const orderRequestSectionElement = document.querySelector("#order-request");
+	orderRequestSectionElement.classList.add("hidden");
+
+	const orderContactDivElement = document.querySelector("#order-contact");
+	const contactNameSpanElement = document.createElement("span");
+	contactNameSpanElement.innerText = document.querySelector(
+		"#contact input#name"
+	).value;
+	const contactAddressSpanElement = document.createElement("span");
+	contactAddressSpanElement.innerText = document.querySelector(
+		"#contact input#address"
+	).value;
+	const contactPhoneSpanElement = document.createElement("span");
+	contactPhoneSpanElement.innerText = document.querySelector(
+		"#contact input#phone"
+	).value;
+	orderContactDivElement.append(
+		contactNameSpanElement,
+		contactAddressSpanElement,
+		contactPhoneSpanElement
+	);
+
+	const list = document.querySelector("#order-confirmation ol");
+	list.innerHTML = "";
 }
