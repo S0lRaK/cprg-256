@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="author" content="Carlos J. Garcia Carmona" />
+		<title>CPRG-256 Final Project Part 2</title>
+		<!-- Bootstrap -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<!-- Material Icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto"
+			rel="stylesheet"
+		/>
+		<!-- Custom styles -->
+		<link rel="stylesheet" href="styles/index.css" />
+		<!-- Custom scripts -->
+		<script src="js/jsonFileHandler.js"></script>
+		<script src="js/quiz.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1 class="display-4 text-center">JavaScript Quiz</h1>
+		</header>
+		<section id="quiz" class="d-flex flex-column justify-content-between">
+			<ol class="list-group"></ol>
+			<button type="button" class="btn btn-outline-success" onclick="grade()">
+				Grade Quiz
+			</button>
+			<div id="quiz-result"></div>
+		</section>
+	</body>
+</html>

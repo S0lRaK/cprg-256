@@ -1,0 +1,12 @@
+$font: "Roboto";
+$fontSizeBase: 16px;
+
+body {
+	font-family: $font;
+	font-size: $fontSizeBase;
+	padding: 5%;
+}
+
+#quiz {
+  li { margin-bottom: 1%;}
+}
