@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="author" content="Carlos J. Garcia Carmona" />
+		<title>CPRG-256 Final Project Part 1</title>
+		<!-- Bootstrap -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<!-- Material Icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto"
+			rel="stylesheet"
+		/>
+		<!-- Custom styles -->
+		<link rel="stylesheet" href="styles/index.css" />
+		<!-- Custom scripts -->
+		<script src="js/jsonFileHandler.js"></script>
+		<script src="js/searcher.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1 class="display-4 text-center">Customer Searcher</h1>
+		</header>
+		<section id="searcher" class="d-flex flex-column justify-content-between">
+			<section
+				id="filters"
+				class="d-flex flex-row justify-content-around align-items-center"
+			>
+				<button
+					type="button"
+          class="btn btn-outline-primary active"
+          data-filter="CustomerID"
+					onclick="filter('CustomerID')"
+				>
+					ID
+				</button>
+				<button
+					type="button"
+          class="btn btn-outline-primary"
+          data-filter="LastName"
+					onclick="filter('LastName')"
+				>
+					Last Name
+				</button>
+				<button
+					type="button"
+          class="btn btn-outline-primary"
+          data-filter="CompanyName"
+					onclick="filter('CompanyName')"
+				>
+					Company Name
+				<button
+					type="button"
+          class="btn btn-outline-primary"
+          data-filter="Phone"
+					onclick="filter('Phone')"
+				>
+					Phone
+				</button>
+			</section>
+			<div class="input-group align-self-center" id="search-term">
+				<div class="input-group-prepend">
+					<span class="input-group-text">Search Term</span>
+				</div>
+				<input
+					type="text"
+					aria-label="Search term"
+					class="form-control"
+					id="search-term-input"
+					onkeydown="checkKey(event)"
+					onkeyup="search()"
+				/>
+			</div>
+		</section>
+		<section id="search-result">
+      <ol class="list-group"></ol>
+    </section>
+	</body>
+</html>
