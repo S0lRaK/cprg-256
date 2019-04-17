@@ -19,8 +19,8 @@ function setQuiz() {
 		const questionElement = document.createElement("p");
 		questionElement.innerText = question.qTitle;
 
-    const optionsDivElement = document.createElement("div");
-    optionsDivElement.classList.add("option-group");
+		const optionsDivElement = document.createElement("div");
+		optionsDivElement.classList.add("option-group");
 		const answers = question.answerChoices;
 
 		answers.forEach(answer => {
@@ -33,8 +33,8 @@ function setQuiz() {
 				"id",
 				"q" + question.qNumber + answer.label
 			);
-      optionInputElement.setAttribute("value", answer.label);
-      optionInputElement.setAttribute("name", "q" + question.qNumber)
+			optionInputElement.setAttribute("value", answer.label);
+			optionInputElement.setAttribute("name", "q" + question.qNumber);
 			const optionLabelElement = document.createElement("label");
 			optionLabelElement.classList.add("custom-control-label");
 			optionLabelElement.setAttribute(
@@ -55,8 +55,25 @@ function setQuiz() {
 }
 
 function grade() {
-  const quizResultDivElement = document.getElementById("quiz-result");
-  const optionGroupsElements = document.querySelectorAll(".option-group");
+	const optionGroupsElements = document.querySelectorAll(".option-group");
 
-  let correctAnswers = 0;
+	let correctAnswers = 0;
+
+	optionGroupsElements.forEach(group => {
+		const checkedInput = group.querySelector("input:checked");
+
+		switch (checkedInput.id) {
+			case "q1b":
+			case "q2a":
+			case "q3d":
+			case "q4a":
+			case "q5c":
+				correctAnswers++;
+				break;
+		}
+	});
+
+	const quizResultDivElement = document.getElementById("quiz-result");
+	quizResultDivElement.innerText =
+		"Grade " + correctAnswers + "/" + optionGroupsElements.length;
 }

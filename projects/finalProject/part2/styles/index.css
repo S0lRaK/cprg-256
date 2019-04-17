@@ -7,5 +7,8 @@ body {
 #quiz li {
   margin-bottom: 1%;
 }
+#quiz #quiz-result {
+  margin: 1%;
+}
 
 /*# sourceMappingURL=index.css.map */
