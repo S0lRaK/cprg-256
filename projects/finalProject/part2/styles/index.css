@@ -7,8 +7,12 @@ body {
 #quiz li {
   margin-bottom: 1%;
 }
-#quiz #quiz-result {
-  margin: 1%;
+#quiz li .option-group div input,
+#quiz li .option-group div label {
+  cursor: pointer;
+}
+#quiz #button-grade {
+  margin-bottom: 5%;
 }
 
 /*# sourceMappingURL=index.css.map */

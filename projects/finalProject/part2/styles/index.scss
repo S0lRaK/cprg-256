@@ -8,6 +8,12 @@ body {
 }
 
 #quiz {
-	li { margin-bottom: 1%;}
-	#quiz-result { margin: 1%;}
+	li {
+		margin-bottom: 1%;
+		.option-group div input,
+		.option-group div label {
+			cursor: pointer;
+		}
+	}
+	#button-grade { margin-bottom: 5%; }
 }
