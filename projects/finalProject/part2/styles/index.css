@@ -15,4 +15,9 @@ body {
   margin-bottom: 5%;
 }
 
+.popover .popover-body {
+  text-align: center;
+  font-size: 2rem;
+}
+
 /*# sourceMappingURL=index.css.map */
