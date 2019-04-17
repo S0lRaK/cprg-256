@@ -1,13 +1,18 @@
 "use strict";
 
-window.onload = setQuiz;
+window.onload = init;
 
 $(function() {
-	$('#button-grade').popover({
+	$("#button-grade").popover({
 		container: "body",
 		trigger: "focus"
 	});
 });
+
+function init() {
+	setQuiz();
+	setInputsClickEvent();
+}
 
 function setQuiz() {
 	const quizListSection = document.querySelector("#quiz ol");
@@ -61,7 +66,25 @@ function setQuiz() {
 	}
 }
 
-function grade() {
+function setInputsClickEvent() {
+	const inputs = document.querySelectorAll("input[type=radio]");
+
+	inputs.forEach(input => {
+		input.addEventListener("click", checkEnablingGradingQuiz);
+	})
+}
+
+function checkEnablingGradingQuiz() {
+	const checkedInputs = document.querySelectorAll("input[type=radio]:checked");
+	const questions = document.querySelectorAll(".option-group");
+
+	if (checkedInputs.length == questions.length) {
+		const buttonGrade = document.getElementById("button-grade");
+		buttonGrade.classList.remove("disabled");
+	}
+}
+
+function gradeQuiz() {
 	const optionGroupsElements = document.querySelectorAll(".option-group");
 
 	let correctAnswers = 0;

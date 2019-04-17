@@ -33,7 +33,13 @@
 	</head>
 	<body>
 		<header>
-			<h1 class="display-4 text-center">JavaScript Quiz</h1>
+			<h1 class="display-4 text-center">
+				JavaScript Quiz
+			</h1>
+			<p class="text-center text-muted">
+				Select an answer for each question in order to be able to grade the
+				quiz.
+			</p>
 		</header>
 		<section id="quiz" class="d-flex flex-column justify-content-between">
 			<ol class="list-group"></ol>
@@ -41,16 +47,16 @@
 				role="button"
 				tabindex="0"
 				id="button-grade"
-				class="btn btn-outline-success"
+				class="btn btn-outline-primary disabled"
 				data-toggle="popover"
 				data-container="body"
 				data-placement="bottom"
 				data-trigger="focus"
 				title="Your Grade"
-				onclick="grade()"
+				onclick="gradeQuiz()"
 			>
 				Grade Quiz
-		</a>
+			</a>
 		</section>
 		<!-- Bootstrap JS -->
 		<script
