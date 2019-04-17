@@ -9,7 +9,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<meta name="author" content="Carlos J. Garcia Carmona" />
 		<title>CPRG-256 Final Project Part 2</title>
-		<!-- Bootstrap -->
+		<!-- Bootstrap CSS -->
 		<link
 			rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -30,7 +30,6 @@
 		<link rel="stylesheet" href="styles/index.css" />
 		<!-- Custom scripts -->
 		<script src="js/jsonFileHandler.js"></script>
-		<script src="js/quiz.js"></script>
 	</head>
 	<body>
 		<header>
@@ -38,10 +37,38 @@
 		</header>
 		<section id="quiz" class="d-flex flex-column justify-content-between">
 			<ol class="list-group"></ol>
-			<button type="button" class="btn btn-outline-success" onclick="grade()">
+			<a
+				role="button"
+				tabindex="0"
+				id="button-grade"
+				class="btn btn-outline-success"
+				data-toggle="popover"
+				data-container="body"
+				data-placement="bottom"
+				data-trigger="focus"
+				title="Your Grade"
+				onclick="grade()"
+			>
 				Grade Quiz
-			</button>
-			<h3 id="quiz-result" class="muted text-center"></h3>
+		</a>
 		</section>
+		<!-- Bootstrap JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+		<!-- Custom scripts-->
+		<script src="js/quiz.js"></script>
 	</body>
 </html>

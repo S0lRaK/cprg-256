@@ -2,6 +2,13 @@
 
 window.onload = setQuiz;
 
+$(function() {
+	$('#button-grade').popover({
+		container: "body",
+		trigger: "focus"
+	});
+});
+
 function setQuiz() {
 	const quizListSection = document.querySelector("#quiz ol");
 
@@ -73,7 +80,9 @@ function grade() {
 		}
 	});
 
-	const quizResultDivElement = document.getElementById("quiz-result");
-	quizResultDivElement.innerText =
-		"Grade " + correctAnswers + "/" + optionGroupsElements.length;
+	const quizResultDivElement = document.getElementById("button-grade");
+	quizResultDivElement.dataset.content =
+		correctAnswers + "/" + optionGroupsElements.length;
+
+	$("#button-grade").popover("show");
 }
